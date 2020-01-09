@@ -13,7 +13,7 @@
     <div>
         <div class="container">
             <section>
-                <h1>簡易人月計算シミュレーター</h1>
+                <h1>簡易人日計算シミュレーター</h1>
                 <p>
                     <a href="https://github.com/shimajima-eiji/man-month">計算式など解説ページ</a>
                 </p>
@@ -21,14 +21,14 @@
                     <div class="col">
                         <div class="input-group align-items-center">
                             <div class="mx-2">時給：</div><input id="hour" onblur="button(this)" class="form-control"
-                                type="number" placeholder="入力後、時給＊人月で計算されます" />　円
+                                type="number" placeholder="入力後、時給＊時間で計算されます" />　円
                         </div>
-                        <small class="form-text text-muted">入力後、時給＊人月で計算されます。</small>
+                        <small class="form-text text-muted">入力後、時給＊時間で計算されます。</small>
                     </div>
                     <div class="col">
                         <div class="input-group align-items-center">
                             <div class="mx-2">人日：</div><input id="hourtime" class="form-control" type="number"
-                                placeholder="入力後は時給・月収などを編集してください。" />　日
+                                placeholder="入力後は時給・月収などを編集してください。" />　時間
                         </div>
                         <small class="form-text text-muted">入力後は時給・月収などを編集してください。</small>
                     </div>
@@ -37,7 +37,7 @@
                     <div class="col">
                         <div class="input-group align-items-center">
                             <div class="mx-2">月収：</div><input id="month" onblur="button(this)" class="form-control"
-                                type="number" placeholder="入力後、月収ベースで計算されます" />　円
+                                type="number" placeholder="入力後、月収ベースで計算されます" />　時間
                         </div>
                         <small class="form-text text-muted">入力後、月収ベースで計算されます</small>
                     </div>
