@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>人月計算</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <div>
+        <div class="container">
+            <section>
+                <h1>簡易人日計算シミュレーター</h1>
+                <p>
+                    <a href="https://github.com/shimajima-eiji/man-month">計算式など解説ページ</a>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group align-items-center">
+                            <div class="mx-2">時給：</div><input id="hour" onblur="button(this)" class="form-control"
+                                type="number" placeholder="入力後、時給＊時間で計算されます" />　円
+                        </div>
+                        <small class="form-text text-muted">入力後、時給＊時間で計算されます。</small>
+                    </div>
+                    <div class="col">
+                        <div class="input-group align-items-center">
+                            <div class="mx-2">稼働時／月：</div><input id="hourtime" class="form-control" type="number"
+                                placeholder="入力後は時給・月収などを編集してください。" />　時間
+                        </div>
+                        <small class="form-text text-muted">入力後は時給・月収などを編集してください。</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group align-items-center">
+                            <div class="mx-2">月収：</div><input id="month" onblur="button(this)" class="form-control"
+                                type="number" placeholder="入力後、月収ベースで計算されます" />　時間
+                        </div>
+                        <small class="form-text text-muted">入力後、月収ベースで計算されます</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group align-items-center">
+                            <div class="mx-2">年収：</div><input id="year" onblur="button(this)" class="form-control"
+                                type="number" placeholder="入力後、年収ベースで計算されます" />　円
+                        </div>
+                        <small class="form-text text-muted">入力後、年収ベースで計算されます。</small>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <p class="border border-dark rounded">
+                    このページは<a href="https://www.bootstrapcdn.com/">BootstrapCDN</a>と<a
+                        href="https://books.google.co.jp/books?id=RA9tDwAAQBAJ&pg=PA408&dq=ISDN978-4-7980-5405-6&hl=ja&sa=X&ved=0ahUKEwiV_qH8lPbmAhXac94KHZsdCkYQ6AEIMTAB#v=onepage&q=ISDN978-4-7980-5405-6&f=false">CSSフレームワークBootstrap入門</a>でできています。<br />
+                    Bootstrapのリファレンス＆チートシートとして非常に便利です。<br />
+                    <a class="btn btn-primary" href="https://amzn.to/39P41R0">本で持っておきたい人</a>
+                    <a class="btn btn-primary" href="https://amzn.to/2T5THy1">Kindleでサクッと持ちたい人</a>
+                </p>
+            </footer>
+        </div>
+        </body>
+
+        <script src="./calc.js"></script>
+
+</html>
