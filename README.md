@@ -1,3 +1,8 @@
+# Navigation
+- [Github](https://github.com/shimajima-eiji/Hosting)
+- [GithubPages](https://shimajima-eiji.github.io/Hosting/)
+
+# Information
 - [GoogleMap-API](https://shimajima-eiji.github.io/Hosting/GoogleMap)
   - デフォルトのGoogleMapがブログ用のキャプチャに向かないので、クリアな地図を表示させるために作成
   - [GitHub](https://github.com/shimajima-eiji/Hosting/tree/master/GoogleMap)
