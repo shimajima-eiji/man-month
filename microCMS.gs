@@ -1,14 +1,11 @@
-var microCMS = function(endpoint, options) {
-  if(!endpoint) endpoint = PROPERTIES.ENDPOINT;
-  if(!options || !options.hasOwnProperty("headers")) options = {headers: {"X-API-KEY": PROPERTIES.APIKEY}};
-  
-  var result = 'http.Fetch: ' + endpoint + ' / ' + options;
-  try {
-    result = JSON.parse(UrlFetchApp.fetch( endpoint, options));
-  } catch(e) {
-    print(result);
-  }
+var microCMS = function(contentId) {
+  const ENDPOINT = PROPERTIES.ENDPOINT + contentId;
+  const OPTIONS = {headers: {"X-API-KEY": PROPERTIES[contentId]}};
 
-  debug(result);
-  return result;
+  debug(Module);
+  return Module.fetch(ENDPOINT, OPTIONS);
+}
+
+function test() {
+  Logger.log(microCMS(PROPERTIES.contentId));
 }
