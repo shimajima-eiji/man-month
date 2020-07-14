@@ -11,13 +11,13 @@ var Module = function ()
         return null;
       }
 
-      var result = 'http.Fetch: ' + endpoint + ' / ' + options;
+      var result = null;
       try
       {
         result = JSON.parse( UrlFetchApp.fetch( endpoint, options ) );
       } catch ( e )
       {
-        print( result );
+        print( 'http.Fetch: ' + endpoint + ' / ' + options );
       }
 
       debug( result );

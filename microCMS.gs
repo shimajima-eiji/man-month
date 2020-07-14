@@ -5,49 +5,49 @@
 function howtouse ( target )
 {
   var fetch = microCMS();
-  fetch.fetch( "line" );
-  fetch.fetch( "line" );  // この時はAPIをコールしない
-  fetch.line;  // fetchした要素は自動的に追加されるので、後で呼ぶことはない
+  fetch.fetch( "slack" );  // fetch.slackのjsonを追加
+  fetch.fetch( "line" );   // fetch.lineのjsonを追加
+  fetch.fetch( "line" );   // この時はAPIをコールしない
+  fetch.line;  // いったんfetchしたものは引数で指定した名前でも呼び出せる
 }
 ```
 */
+function howtouse ( target )
+{
+  var fetch = microCMS();
+  fetch.get( "line2" );
+  print( fetch );
+}
 
 var microCMS = function ()
 {
+  const OPTIONS = { headers: { "X-API-KEY": PROPERTIES.APIKEY } };
+  const LIMIT = 100;
   /*
     TODO: microCMSの仕様として、limitが最大何件取れるか？
     ダメならoffsetを取ってセルフでページング処理をするしかない。
   */
-  function _run ( contentId, apikey )
+
+  function _run ( contentId )
   {
-    const LIMIT = 100;
-    const ENDPOINT = PROPERTIES.ENDPOINT + contentId + "?limit=" + LIMIT;
-    const OPTIONS = ( apikey ) ? { headers: { "X-API-KEY": apikey } } : null;
+    var ENDPOINT = PROPERTIES.ENDPOINT + contentId + "?limit=" + LIMIT;
 
     debug( Module );
     return Module.fetch( ENDPOINT, OPTIONS );
   };
-  function filter ( target )
+  function fetchCall ( target )
   {
-    // 既に実施していたらAPIをコールせず、値だけ返す
-    if ( fetched.hasOwnProperty( target ) )
+    // 過去に未実施の場合だけAPIコール
+    if ( !fetched.hasOwnProperty( target ) )
     {
-      return fetched[ target ];
+      var result = _run( target );
+      if ( result ) fetched[ target ] = result;
     }
-
-    var apikey = fetched.property.contents.filter( function ( content )
-    {
-      return content.id == target;
-    } )[ 0 ].value;
-
-    // 呼び出されたら追記すると同時に、値も返却する。
-    fetched[ target ] = _run( target, apikey );
     return fetched[ target ];
   }
 
   var fetched = {
-    fetch: filter,
-    property: _run( PROPERTIES.PROPERTY, PROPERTIES.APIKEY ),  // 不用意にAPIをコールしないように保持
+    get: fetchCall
   };
 
   return fetched;
