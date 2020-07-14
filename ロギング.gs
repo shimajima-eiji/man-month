@@ -1,7 +1,7 @@
-function debug(str) {
-  Logger.log(str);
+var debug = function(str) {
+  if(PROPERTIES.DEBUG == "true") Logger.log(str);
 }
 
-function print(str) {
+var print = function(str) {
   Logger.log(str);
 }

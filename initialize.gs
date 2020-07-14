@@ -1,1 +1,3 @@
-const PROPERTIES = PropertiesService.getScriptProperties().getProperties();
+var PROPERTIES = function() {
+  return PropertiesService.getScriptProperties().getProperties();
+}();
