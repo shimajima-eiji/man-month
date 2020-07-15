@@ -1,5 +1,9 @@
 var Module = function ()
 {
+  /*
+  # Require
+  - Moment: 15hgNOjKHUG4UtyZl9clqBbl23sDvWMS8pfDJOyIapZk5RBqwL3i-rlCo or MHMchiX6c1bwSqGM1PZiW_PxhMjh3Sh48
+  */
   const RSS = "rss";
   return {
 
@@ -32,9 +36,13 @@ var Module = function ()
     findValue_array: function ( array, key, value )
     {
       return array.filter( function ( object ) { return object[ key ] == value } );
+    },
+    date: function(day) {
+      Moment.moment.lang('ja', {weekdays: ["日","月","火","水","木","金","土"], weekdaysShort: ["日","月","火","水","木","金","土"],});
+      return(day) ? Moment.moment(day) : Moment.moment();
     }
-
   }
   // ここまで
 
 }();
+
