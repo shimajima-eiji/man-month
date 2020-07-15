@@ -3,14 +3,9 @@ var Rss = function(contentID)
   const RSS = "rss";
   var property = microCMS();
   property.get( RSS );
-  const ENDPOINT = property.find("rss", contentID).value;
+  const ENDPOINT = property.find(RSS, contentID).value;
 
-  //rss,xmlから読み取り
-  var xml = UrlFetchApp.fetch( ENDPOINT ).getContentText();
-  var document = XmlService.parse( xml );
-  var entries = document.getRootElement().getChildren( "channel" )[ 0 ].getChildren( "item" );
-
-  entries.map( function ( entry )
+  Module.fetch( ENDPOINT, RSS ).map( function ( entry )
   {
     var title = entry.getChildText( "title" );
     var link = entry.getChildText( "link" );
@@ -19,7 +14,6 @@ var Rss = function(contentID)
     Logger.log( link );
     Logger.log( pubDate );
   } )
-
 }
 
 function test() {
