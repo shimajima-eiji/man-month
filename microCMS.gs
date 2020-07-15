@@ -61,11 +61,15 @@ var microCMS = function ()
       if ( result ) fetched[ target ] = result;
     }
     return fetched[ target ];
-  }
+  };
+  function find(contentId, value) {
+    return Module.findValue_array( fetched[contentId].contents, KEYID, value )[0]
+  };
 
   var fetched = {
     property: _run( PROPERTIES.PERMISSION_CONTENTID ),
-    get: fetchCall
+    get: fetchCall,
+    find: find
   };
 
   return fetched;
