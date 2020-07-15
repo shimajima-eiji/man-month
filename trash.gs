@@ -1,4 +1,4 @@
-function notify_trash(day) {
+var notify_trash = function(day) {
   const NOSEND = "なし";  // valueが必須項目のため、nullが使えない(str)
   const APIID = "home";
   const CONTENTID = "notify_token_trash";
@@ -9,10 +9,7 @@ function notify_trash(day) {
   var content = function(contentID) {
     return property.find(APIID, contentID).value;
   };
-  day = Module.date().add(day, 'days');
-
-  var line = Line();
-  line.send(content(day.lang("en").format("dddd").toLowerCase()), CONTENTID);
+  Line().send((day) ? "明日は" : "今日は" + content(Module.date().add(day, 'days').lang("en").format("dddd").toLowerCase()) + "の日！", CONTENTID);
 }
 
 function today() {
