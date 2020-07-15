@@ -5,24 +5,21 @@
 function howtouse ( target )
 {
   var fetch = microCMS();
-  fetch.fetch( "slack" );  // fetch.slackのjsonを追加
-  fetch.fetch( "line" );   // fetch.lineのjsonを追加
-  fetch.fetch( "line" );   // この時はAPIをコールしない
+  fetch.get( "slack" );  // fetch.slackのjsonを追加
+  fetch.get( "line" );   // fetch.lineのjsonを追加
+  fetch.get( "line" );   // この時はAPIをコールしない
   fetch.line;  // いったんfetchしたものは引数で指定した名前でも呼び出せる
+
+  fetch.get( "notExist" );   // microCMSに存在するが、propertyに登録されていないものは参照できない
 }
 ```
 */
-function howtouse ( target )
-{
-  var fetch = microCMS();
-  fetch.get( "line2" );
-  print( fetch );
-}
 
 var microCMS = function ()
 {
   const OPTIONS = { headers: { "X-API-KEY": PROPERTIES.APIKEY } };
   const LIMIT = 100;
+  const KEYID = "id";
   /*
     TODO: microCMSの仕様として、limitが最大何件取れるか？
     ダメならoffsetを取ってセルフでページング処理をするしかない。
@@ -37,6 +34,13 @@ var microCMS = function ()
   };
   function fetchCall ( target )
   {
+    // microCMSで設定しているコンテンツだけ配信する
+    if ( Module.findValue_array(fetched.property.contents, KEYID, target).length == 0)
+    {
+      print("要素が存在しません")
+      return null;
+    }
+    
     // 過去に未実施の場合だけAPIコール
     if ( !fetched.hasOwnProperty( target ) )
     {
@@ -47,6 +51,7 @@ var microCMS = function ()
   }
 
   var fetched = {
+    property: _run( PROPERTIES.PROPERTY ),
     get: fetchCall
   };
 

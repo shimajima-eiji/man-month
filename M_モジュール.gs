@@ -23,6 +23,9 @@ var Module = function ()
       debug( result );
       return result;
     },
+    findValue_array: function(array, key, value) {
+      return array.filter( function(object) {return object[key] == value} );
+    }
     // ここまで
 
   };
