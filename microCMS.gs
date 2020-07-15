@@ -1,4 +1,16 @@
 /*
+# 初期設定
+```
+var PROPERTIES = function() {
+  return PropertiesService.getScriptProperties().getProperties();
+}();
+```
+プロジェクトのプロパティにはそれぞれ、
+- SERVICE_ID
+- APIKEY
+- PERMISSION_CONTENTID
+を設定する
+
 # 使い方
 ソースコードで解説する。
 ```
@@ -17,6 +29,7 @@ function howtouse ( target )
 
 var microCMS = function ()
 {
+  const SERVICE_ENDPOINT = "https://" + PROPERTIES.SERVICE_ID + ".microcms.io/api/v1/"
   const OPTIONS = { headers: { "X-API-KEY": PROPERTIES.APIKEY } };
   const LIMIT = 100;
   const KEYID = "id";
@@ -27,20 +40,20 @@ var microCMS = function ()
 
   function _run ( contentId )
   {
-    var ENDPOINT = PROPERTIES.ENDPOINT + contentId + "?limit=" + LIMIT;
+    var contents_endpoint = SERVICE_ENDPOINT + contentId + "?limit=" + LIMIT;
 
     debug( Module );
-    return Module.fetch( ENDPOINT, OPTIONS );
+    return Module.fetch( contents_endpoint, OPTIONS );
   };
   function fetchCall ( target )
   {
     // microCMSで設定しているコンテンツだけ配信する
-    if ( Module.findValue_array(fetched.property.contents, KEYID, target).length == 0)
+    if ( Module.findValue_array( fetched.property.contents, KEYID, target ).length == 0 )
     {
-      print("要素が存在しません")
+      print( "要素が存在しません" )
       return null;
     }
-    
+
     // 過去に未実施の場合だけAPIコール
     if ( !fetched.hasOwnProperty( target ) )
     {
@@ -51,7 +64,7 @@ var microCMS = function ()
   }
 
   var fetched = {
-    property: _run( PROPERTIES.PROPERTY ),
+    property: _run( PROPERTIES.PERMISSION_CONTENTID ),
     get: fetchCall
   };
 
