@@ -2,7 +2,8 @@ var Module = function ()
 {
   /*
   # Require
-  - Moment: 15hgNOjKHUG4UtyZl9clqBbl23sDvWMS8pfDJOyIapZk5RBqwL3i-rlCo or MHMchiX6c1bwSqGM1PZiW_PxhMjh3Sh48
+  - Moment: MHMchiX6c1bwSqGM1PZiW_PxhMjh3Sh48
+  - Slack:  M3W5Ut3Q39AaIwLquryEPMwV62A3znfOO
   */
   const RSS = "rss";
   return {
@@ -19,11 +20,13 @@ var Module = function ()
       var result = null;
       try
       {
-        if (options == RSS) {
+        if ( options == RSS )
+        {
           result = UrlFetchApp.fetch( endpoint );
           result = XmlService.parse( result.getContentText() ).getRootElement().getChildren( "channel" )[ 0 ].getChildren( "item" )
-        } else {
-          result = JSON.parse(UrlFetchApp.fetch( endpoint, options ) );
+        } else
+        {
+          result = JSON.parse( UrlFetchApp.fetch( endpoint, options ) );
         }
       } catch ( e )
       {
@@ -37,12 +40,14 @@ var Module = function ()
     {
       return array.filter( function ( object ) { return object[ key ] == value } );
     },
-    date: function(day) {
-      Moment.moment.lang('ja', {weekdays: ["日","月","火","水","木","金","土"], weekdaysShort: ["日","月","火","水","木","金","土"],});
-      return(day) ? Moment.moment(day) : Moment.moment();
+    date: function ( day )
+    {
+      Moment.moment.lang( 'ja', { weekdays: [ "日", "月", "火", "水", "木", "金", "土" ], weekdaysShort: [ "日", "月", "火", "水", "木", "金", "土" ], } );
+      return ( day ) ? Moment.moment( day ) : Moment.moment();
     }
-  }
-  // ここまで
+
+    // ここまで
+  };
 
 }();
 

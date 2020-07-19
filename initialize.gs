@@ -1,3 +1,4 @@
-var PROPERTIES = function() {
+var PROPERTIES = function ()
+{
   return PropertiesService.getScriptProperties().getProperties();
 }();
