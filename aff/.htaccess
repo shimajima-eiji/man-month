@@ -1,6 +1,6 @@
-RewriteEngine on
-<Files ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-Redirect temp * https://www.google.com/
-order deny,allow
+# RewriteEngine on
+# <Files ~ "^\.(htaccess|htpasswd)$">
+# deny from all
+# </Files>
+# Redirect temp * https://www.google.com/
+# order deny,allow
