@@ -24,10 +24,12 @@ var Line = function ()
       }
     }
   }
-}
 
 function test ()
 {
   var line = Line();
   line.send( "test", "notify_token_news" );
 }
+
+}
+

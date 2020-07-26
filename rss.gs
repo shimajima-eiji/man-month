@@ -14,8 +14,9 @@ var Rss = function(contentID)
     Logger.log( link );
     Logger.log( pubDate );
   } )
-}
 
 function test() {
   Rss("note");
+}
+
 }
