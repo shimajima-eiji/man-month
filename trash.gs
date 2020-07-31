@@ -4,7 +4,7 @@
 運用開始。使い方: https://github.com/shimajima-eiji/Hosting/wiki/[共通]-github-changesが使えないサービスのバージョン管理
 
 # 定数
-- NOSEND: valueが必須項目のため、nullが使えない(str)
+- NOSEND: ゴミの日でない場合、何もしないための値。keyがない場合とvalueがなしの2パターン、
 - APIID: GASで使うAPI名のID(contentId)
 - LINE_TOKEN: [LINE notify](https://notify-bot.line.me/my/)に登録したトークン
 - MESSAGES: 出力設定
@@ -19,7 +19,7 @@
 */
 var notify_trash = function ( day )
 {
-  const NOSEND = "なし";
+  const NOSEND = ["なし", undefined];
   const APIID = "home";
   const LINE_TOKEN = "notify_token_trash";
   const MESSAGES = {
@@ -31,7 +31,7 @@ var notify_trash = function ( day )
 
   var date = Module.date().add( day, 'days' ).lang( "en" ).format( "dddd" ).toLowerCase();  // dayの曜日(英語)を取得
   var content = microCMS().value( APIID, date );
-  if ( content == NOSEND ) return;  // ゴミの日でない場合、何もしない
+  if ( NOSEND.indexOf(content) > -1 ) return;  // includesが使えない
 
   var header = ( day ) ? MESSAGES.tommorow : MESSAGES.today;
   var message = MESSAGES.pype + header + content + MESSAGES.footer + MESSAGES.pype;
