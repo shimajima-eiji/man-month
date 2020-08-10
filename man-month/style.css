@@ -1,0 +1,103 @@
+@keyframes tabAnim {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.tab_wrap {
+  width: 300px;
+  margin: auto;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tab_area {
+  font-size: 0;
+  margin: 0 10px;
+}
+
+.tab_area label {
+  width: 80px;
+  margin: 0 5px;
+  display: inline-block;
+  padding: 12px 0;
+  color: #999;
+  background: #90c9cc;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: ease 0.2s opacity;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tab_area label:hover {
+  opacity: 0.5;
+  background: #afd6d8;
+}
+
+.panel_area {
+  overflow: hidden;
+  height: 230px;
+  position: relative;
+
+  background: #ffffff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top: 8px solid #d7e9ea;
+}
+
+.tab_panel {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+}
+
+.tab_panel p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 80px 0;
+}
+
+#tab1:checked~.tab_area .tab1_label {
+  background: #fff;
+  color: #000;
+}
+
+#tab1:checked~.panel_area #panel1 {
+  animation: tabAnim ease 0.4s forwards;
+  -ms-animation: tabAnim ease 0.4s forwards;
+  z-index: 1;
+}
+
+#tab2:checked~.tab_area .tab2_label {
+  background: #fff;
+  color: #000;
+}
+
+#tab2:checked~.panel_area #panel2 {
+  animation: tabAnim ease 0.4s forwards;
+  -ms-animation: tabAnim ease 0.4s forwards;
+  z-index: 1;
+}
+
+#tab3:checked~.tab_area .tab3_label {
+  background: #fff;
+  color: #000;
+}
+
+#tab3:checked~.panel_area #panel3 {
+  animation: tabAnim ease 0.4s forwards;
+  -ms-animation: tabAnim ease 0.4s forwards;
+  z-index: 1;
+}
