@@ -1,6 +1,11 @@
-## Change Log
+## 更新履歴
 
-### upcoming (2020/07/24 12:57 +00:00)
+### 最終更新 2020年8月12日
+- [594d5f3](https://github.com/shimajima-eiji/Hosting/commit/594d5f36342294caeb1a4302d62327070dcb8478) [2020/08/12][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
+- [cbd5a03](https://github.com/shimajima-eiji/Hosting/commit/cbd5a03c9028b8d2b304eaddc8aab82238c6c075) [2020/08/10][man-month] Chrome拡張に対応 (@shimajima-eiji)
+- [80ddddc](https://github.com/shimajima-eiji/Hosting/commit/80ddddcfda8c8a285d59f6bc763598ee6d33d558) Update README.md (@shimajima-eiji)
+- [87ca02a](https://github.com/shimajima-eiji/Hosting/commit/87ca02aeb57f66e20c201bae0a36d2994fe2dccd) Merge branch 'master' of https://github.com/shimajima-eiji/Hosting (@shimajima-eiji)
+- [3819631](https://github.com/shimajima-eiji/Hosting/commit/381963187f99d9cbb12b7998e88be9256c8469d4) [2020/07/24] CHANGELOGを最新化 (@shimajima-eiji)
 - [285495b](https://github.com/shimajima-eiji/Hosting/commit/285495ba1e0f5b5591a82bf8f32d41dfe3bab40a) Delete index.html (@shimajima-eiji)
 - [74cfeeb](https://github.com/shimajima-eiji/Hosting/commit/74cfeebbaec99dd882d9d70cb5574b1452954bdc) Delete .htaccess (@shimajima-eiji)
 - [08f6cba](https://github.com/shimajima-eiji/Hosting/commit/08f6cbab3cb06ca31a55382c1668e5a2a41549c9) Update .htaccess (@shimajima-eiji)
