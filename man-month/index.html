@@ -17,25 +17,25 @@
       <input id="tab2" type="radio" name="tab_btn">
       <input id="tab3" type="radio" name="tab_btn">
 
-      <div class="tab_area">
+      <nav class="tab_area">
         <label class="tab1_label" for="tab1">SES業務委託</label>
         <label class="tab2_label" for="tab2">派遣</label>
         <label class="tab3_label" for="tab3">時間外内訳</label>
-      </div>
-      <div class="panel_area">
+      </nav>
+      <section class="panel_area">
 
         <!-- SES業務委託 -->
         <div id="panel1" class="tab_panel">
           <div class="row">
             <div class="col">
-              <h2>max/h</h2>
+              <h2>高給/時</h2>
               <div class="input-group align-items-center">
                 <div class="mx-2"></div>¥<input id="high" onblur="calc(this)" class="form-control" type="number"
                   value="0" min="0" />
               </div>
             </div>
             <div class="col">
-              <h2>min/h</h2>
+              <h2>低給/時</h2>
               <div class="input-group align-items-center">
                 <div class="mx-2"></div>¥<input id="low" onblur="calc(this)" class="form-control" type="number"
                   value="0" min="0" />
@@ -45,14 +45,14 @@
           <small class="form-text text-muted">月収か年収と時間を入力すると反映されます。</small>
           <div class="row">
             <div class="col">
-              <h2>short:h</h2>
+              <h2>短稼働時</h2>
               <div class="input-group align-items-center">
                 <div class="mx-2"></div><input id="short" onblur="calc(this)" class="form-control" type="number"
                   value="140" min="1" max="744" />h
               </div>
             </div>
             <div class="col">
-              <h2>long:h</h2>
+              <h2>長稼働時</h2>
               <div class="input-group align-items-center">
                 <div class="mx-2"></div><input id="long" onblur="calc(this)" class="form-control" type="number"
                   value="180" min="1" max="744" />h
@@ -128,37 +128,46 @@
         <!-- タブ切り替え時に最後の要素が一瞬表示されるため、不可視化するために貼り付ける -->
         <div id="panel4" class="tab_panel">
         </div>
-      </div>
-      <div class="row">
-        <!-- <h1>月収</h1> -->
-        <div class="col">
-          <div class="input-group align-items-center">
-            <div class="mx-2">¥</div><input id="month" onblur="calc(this)" class="form-control" type="number" value="0"
-              min="0" />
+      </section>
+
+      <section>
+        <h1>月収</h1>
+        <div class="row">
+          <div class="col">
+            <div class="input-group align-items-center">
+              <div class="mx-2">¥</div><input id="month" onblur="calc(this)" class="form-control" type="number"
+                value="0" min="0" />
+            </div>
+            <small class="form-text text-muted">入力後、月収ベースで計算されます</small>
           </div>
-          <small class="form-text text-muted">入力後、月収ベースで計算されます</small>
         </div>
-      </div>
-      <h1>年収</h1>
-      <div class="row">
-        <div class="col">
-          <div class="input-group align-items-center">
-            <div class="mx-2">¥</div><input id="year" onblur="calc(this)" class="form-control" type="number" value="0"
-              min="0" />
+        <h1>年収</h1>
+        <div class="row">
+          <div class="col">
+            <div class="input-group align-items-center">
+              <div class="mx-2">¥</div><input id="year" onblur="calc(this)" class="form-control" type="number" value="0"
+                min="0" />
+            </div>
+            <small class="form-text text-muted">入力後、年収ベースで計算されます。</small>
           </div>
-          <small class="form-text text-muted">入力後、年収ベースで計算されます。</small>
         </div>
-      </div>
-      <h1>最低賃金</h1>
-      <div class="row">
-        <div class="col">
-          <div class="input-group align-items-center">
-            <div class="mx-2">勤務地: </div><input id="location" onblur="calc(this)" class="form-control" type="number"
-              value="0" min="0" />
+        <h1>最低賃金(県毎)</h1>
+        <div class="row">
+          <div class="col">
+            <div class="input-group align-items-center">
+              <div class="mx-2">勤務地: </div>
+              <form action="#" name="wage">
+                <select name="location" size="1" onchange="changelocation(this.value);">
+                  <option value="0">（未選択）
+                </select>
+            </div>
           </div>
-          <small class="form-text text-muted">入力後、年収ベースで計算されます。</small>
+          <div class="col">
+            <div class="input-group align-items-center">
+              <div class="mx-2">¥</div><input id="wage_view" class="form-control" type="number" value="0" disabled />
+            </div>
+          </div>
         </div>
-      </div>
       </section>
       <footer class="border border-dark rounded">
         <h1>謝辞</h1>
@@ -170,5 +179,7 @@
   </body>
   <script src="calc.js"></script>
   <script src="minimum_wage.js"></script>
+  <script
+    src="https://script.google.com/macros/s/AKfycbzRF1iLpeQ6McV3d6Z540yBqovDsErS_OgEeuX3EBFnZQpE_ds/exec?callback=callback"></script>
 
 </html>

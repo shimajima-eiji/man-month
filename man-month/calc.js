@@ -107,6 +107,8 @@ const values = {
     years: () => funcs.get( ids.common.year ),
 
     dispatch: () => funcs.get( ids.dispatch.price ),
+    low: () => funcs.get( ids.outsource.price_low ),
+    high: () => funcs.get( ids.outsource.price_high ),
 
     over: () => funcs.get( ids.after.over ) * 1.25,
     late: () => funcs.get( ids.after.late ) * 1.5,
@@ -338,4 +340,6 @@ function calc ( e )
       business.m2h();
       break;
   }
+
+  __check_wage();
 }

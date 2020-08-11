@@ -4,13 +4,15 @@
 
 [使ってみる](https://shimajima-eiji.github.io/Hosting/man-month/)
 
-chrome拡張機能に対応しました。
+## chrome拡張機能に対応しました。
 
 1. このリポジトリをzipでダウンロード
+  - 将来的にman-monthブランチに移行予定
 1. ダウンロードできたら解凍する
 1. [拡張機能（お使いのchromeでアクセスしてください）](chrome://extensions/)に移動
 1. 「デベロッパーモードをONにする
 1. 「パッケージ化されていない拡張機能を読み込む」で解凍先を指定
+  - 執筆時点ではman-monthディレクトリを指定する
 1. ブラウザ右上にアイコンが追加される
 
 ![image](https://user-images.githubusercontent.com/15845907/89737759-a1169d80-daae-11ea-8a2c-1bb292fefd55.png)
@@ -43,11 +45,22 @@ chrome拡張機能に対応しました。
 <br>これは想定された仕様であり、そもそもの想定が契約時の紛争解決の一助のためであって、本スクリプトは時給から月給を計算するためのものではないからです。
 <br>同様に、「1日は12時間働き、2日は4時間しか働いていない」といったような変則的なケースにも対応していません。
 
+## 時間外内訳タブ
+業務委託で受けた180時間の案件と派遣で受けた180時間の案件だとどっちが得なの？
+<br>といった疑問を一発で解決する項目です。
+
+派遣タブで残業が発生した場合、(残業時間-160)を時間外内訳タブでうまいこと振り分けてやると、残業時間の区分を加味して月収が出せます。
+<br>毎日残業ではなく、月残業のトータルが出るので月収が分かります。ここから保険なり色々なものが引かれるので手取り額が想像しやすくなります。
+
+## 最低賃金
+エンジニアの仕事をしている人には要らないと思われますが、そうでない人にとっては重要な最低賃金に対応しました。
+<br>最低賃金は[厚労省発表](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/minimumichiran/)のデータを使っています。
+
 # 計算式について
 [大阪労働局](https://jsite.mhlw.go.jp/osaka-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/hourei_seido/jikan2/warimasi.html)を採用しています。
 <br>（[ロジック部分](https://github.com/shimajima-eiji/Hosting/blob/master/man-month/calc.js)）
 
-最低賃金については[最低賃金API](https://github.com/takaya1992/jp_minimum_wage_data)をお借りしています。
+最低賃金（追記：設計部分に限り）については[最低賃金API](https://github.com/takaya1992/jp_minimum_wage_data)をお借りしています。
 
 ## 作り方
 このページは[BootstrapCDN](https://www.bootstrapcdn.com/)と[CSSフレームワークBootstrap入門](https://books.google.co.jp/books?id=RA9tDwAAQBAJ&pg=PA408&dq=ISDN978-4-7980-5405-6&hl=ja&sa=X&ved=0ahUKEwiV_qH8lPbmAhXac94KHZsdCkYQ6AEIMTAB#v=onepage&q=ISDN978-4-7980-5405-6&f=false)でできています。<br />
