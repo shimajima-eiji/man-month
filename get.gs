@@ -19,6 +19,14 @@ function doGet(e) {
     return result;
   }
   Logger.log(result);
+
+  /**
+   * CORSに引っかかるのでJSONPで返す
+   */
+  var callback = e.parameter.callback;
   
-  return result;
+  var res = ContentService.createTextOutput(callback + '(' + JSON.stringify(result) + ')');
+  res = res.setMimeType(ContentService.MimeType.JAVASCRIPT);
+  
+  return res
 }
