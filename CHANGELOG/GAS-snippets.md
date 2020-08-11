@@ -1,6 +1,7 @@
 ## 更新履歴
 
 ### 最終更新 2020年8月12日
+- [dc21ee8](https://github.com/shimajima-eiji/Hosting/commit/dc21ee8d431ed7f08899e7343874181fa845191e) [2020/08/12][CHANGELOG] 最新化 (@shimajima-eiji)
 - [37c7bc3](https://github.com/shimajima-eiji/Hosting/commit/37c7bc32d8b8ebe471bf2f1bad24dd8eaab9c01f) [2020/08/12][CHANGELOG] 最新化 (@shimajima-eiji)
 - [353e85a](https://github.com/shimajima-eiji/Hosting/commit/353e85a8cf53ea31ede3aca4c6927c3db753e729) [2020/08/12][CHANGELOG] 最新化 (@shimajima-eiji)
 - [4208e29](https://github.com/shimajima-eiji/Hosting/commit/4208e2988505494841f686055ac53a9abbf57a6b) [2020/07/27][ver1.0.0][GASver1] 公開 / trashを外出し (@shimajima-eiji)
