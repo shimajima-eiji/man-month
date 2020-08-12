@@ -21,7 +21,7 @@ function __min_max ()
  */
 function __set ( id, value, force )
 {
-  if ( !funcs.get( id ) || force ) document.getElementById( id ).value = parseInt( value );
+  if ( !funcs.get( id ) || force ) document.getElementById( id ).value = value;
 }
 
 /**
@@ -91,6 +91,8 @@ const ids = {
   common: {
     month: 'month',
     year: 'year',
+    view: 'wage_view',
+    wages: 'wages',
   }
 }
 
@@ -136,7 +138,11 @@ const values = {
  * ロジック関数内から呼ぶ場合は必ずfuncsを経由させ、他関数を作成する際は__funcnameを徹底する
  */
 const funcs = {
-  get: ( id ) => Number( document.getElementById( id ).value ),
+  get: ( id ) =>
+  {
+    value = document.getElementById( id ).value;
+    return ( Number( value ) ) ? Number( value ) : value;
+  },
   set: __set,
   run: __run,
   reset: __reset,
