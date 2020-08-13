@@ -1,13 +1,8 @@
 ## 更新履歴
 
 ### 最終更新 2020年8月14日
-- [0e481e1](https://github.com/shimajima-eiji/Hosting/commit/0e481e17ea6921ff03b426efecc555199723b1f9) [2020/08/14][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
-- [de6d8c2](https://github.com/shimajima-eiji/Hosting/commit/de6d8c2e773038ce68d5462766278f7e64fffe89) [2020/08/12][man-month] JSONPを廃止してCORSにも対応、グローバル変数を使わずhidden要素に格納するよう変更 (@shimajima-eiji)
-- [a612564](https://github.com/shimajima-eiji/Hosting/commit/a612564f535621df6c74bfe7e71e1b618fa675f5) [2020/08/12][man-month] 最低賃金に対応 (@shimajima-eiji)
-- [eaac567](https://github.com/shimajima-eiji/Hosting/commit/eaac567eded28dae1e16039fe8ab1539114335cd) [2020/08/12][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
-- [594d5f3](https://github.com/shimajima-eiji/Hosting/commit/594d5f36342294caeb1a4302d62327070dcb8478) [2020/08/12][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
-- [cbd5a03](https://github.com/shimajima-eiji/Hosting/commit/cbd5a03c9028b8d2b304eaddc8aab82238c6c075) [2020/08/10][man-month] Chrome拡張に対応 (@shimajima-eiji)
-- [80ddddc](https://github.com/shimajima-eiji/Hosting/commit/80ddddcfda8c8a285d59f6bc763598ee6d33d558) Update README.md (@shimajima-eiji)
+- [ca9ef61](https://github.com/shimajima-eiji/Hosting/commit/ca9ef61471b9944d6de93729d5e646e6b8c3908f) [2020/08/14][CHANGELOG] 最新化 (@shimajima-eiji)
+- [2697352](https://github.com/shimajima-eiji/Hosting/commit/26973521964d528305e59cb620d9afa33e9da2c6) [2020/07/31][ver1.0.0] 運用開始 (@shimajima-eiji)
 - [87ca02a](https://github.com/shimajima-eiji/Hosting/commit/87ca02aeb57f66e20c201bae0a36d2994fe2dccd) Merge branch 'master' of https://github.com/shimajima-eiji/Hosting (@shimajima-eiji)
 - [3819631](https://github.com/shimajima-eiji/Hosting/commit/381963187f99d9cbb12b7998e88be9256c8469d4) [2020/07/24] CHANGELOGを最新化 (@shimajima-eiji)
 - [285495b](https://github.com/shimajima-eiji/Hosting/commit/285495ba1e0f5b5591a82bf8f32d41dfe3bab40a) Delete index.html (@shimajima-eiji)
