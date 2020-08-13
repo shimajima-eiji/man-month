@@ -28,9 +28,9 @@ export default {
     // console.log(params);  // ページにアクセスするとデバッグできる
     try {
       const { data } = await axios.get(
-        `${params.$config.url}/${params.params.slug}`,
+        `https://nomuraya-tutorial.microcms.io/api/v1/test/${params.params.slug}`,
         {
-          headers: { 'X-API-KEY': params.$config.apiKey }
+          headers: { 'X-API-KEY': '6615a5a4-b894-445e-b979-24612d1a018c' }
         }
       )
 

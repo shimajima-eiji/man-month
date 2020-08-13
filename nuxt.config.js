@@ -90,8 +90,8 @@ export default {
 
       // 一覧のページング
       const pages = await axios
-        .get( `${URL}?limit=0`, {
-          headers: { 'X-API-KEY': API_KEY },
+        .get( `https://nomuraya-tutorial.microcms.io/api/v1/test?limit=0`, {
+          headers: { 'X-API-KEY': '6615a5a4-b894-445e-b979-24612d1a018c' },
         } )
         .then( ( res ) =>
           range( 1, Math.ceil( res.data.totalCount / limit ) ).map( ( p ) => ( {
