@@ -28,9 +28,9 @@ export default {
     // console.log(params);  // ページにアクセスするとデバッグできる
     try {
       const { data } = await axios.get(
-        `${process.env.URL}/${params.params.slug}`,
+        `${process.env.url}/${params.params.slug}`,
         {
-          headers: { 'X-API-KEY': process.env.API_KEY }
+          headers: { 'X-API-KEY': process.env.apiKey }
         }
       )
 

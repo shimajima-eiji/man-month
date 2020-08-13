@@ -32,9 +32,9 @@ export default {
     const limit = 1
 
     const { data } = await axios.get(
-      `${process.env.URL}?limit=${limit}&offset=${(page - 1) * limit}`,
+      `${process.env.url}?limit=${limit}&offset=${(page - 1) * limit}`,
       {
-        headers: { 'X-API-KEY': process.env.API_KEY }
+        headers: { 'X-API-KEY': process.env.apiKey }
       }
     );
 
