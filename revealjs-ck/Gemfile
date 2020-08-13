@@ -1,4 +1,0 @@
-source 'https://rubygems.org'
-
-gem 'reveal-ck'
-gem "haml", ">= 5.0.0"
