@@ -1,6 +1,9 @@
 ## 更新履歴
 
-### 最終更新 2020年8月12日
+### 最終更新 2020年8月14日
+- [de6d8c2](https://github.com/shimajima-eiji/Hosting/commit/de6d8c2e773038ce68d5462766278f7e64fffe89) [2020/08/12][man-month] JSONPを廃止してCORSにも対応、グローバル変数を使わずhidden要素に格納するよう変更 (@shimajima-eiji)
+- [a612564](https://github.com/shimajima-eiji/Hosting/commit/a612564f535621df6c74bfe7e71e1b618fa675f5) [2020/08/12][man-month] 最低賃金に対応 (@shimajima-eiji)
+- [eaac567](https://github.com/shimajima-eiji/Hosting/commit/eaac567eded28dae1e16039fe8ab1539114335cd) [2020/08/12][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
 - [594d5f3](https://github.com/shimajima-eiji/Hosting/commit/594d5f36342294caeb1a4302d62327070dcb8478) [2020/08/12][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
 - [cbd5a03](https://github.com/shimajima-eiji/Hosting/commit/cbd5a03c9028b8d2b304eaddc8aab82238c6c075) [2020/08/10][man-month] Chrome拡張に対応 (@shimajima-eiji)
 - [80ddddc](https://github.com/shimajima-eiji/Hosting/commit/80ddddcfda8c8a285d59f6bc763598ee6d33d558) Update README.md (@shimajima-eiji)
