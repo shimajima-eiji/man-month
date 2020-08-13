@@ -107,7 +107,7 @@ export default {
   ** https://microcms.io/blog/nuxt-secure-api-key
   ** これではNetlifyにデプロイ時にエラーになるので、privateRuntimeConfigは見送り
   */
-  privateRuntimeConfig: {
+  env: {
     url: URL,
     apiKey: API_KEY
   },
