@@ -1,12 +1,16 @@
 ## 更新履歴
 
 ### 最終更新 2020年8月14日
-- [20c9562](https://github.com/shimajima-eiji/Hosting/commit/20c956286a22b3dd0475945166e2e9bbb5247ebf) [2020/08/14][CHANGELOG][GAS-timetrigger] 最新化 (@shimajima-eiji)
-- [0e481e1](https://github.com/shimajima-eiji/Hosting/commit/0e481e17ea6921ff03b426efecc555199723b1f9) [2020/08/14][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
-- [de6d8c2](https://github.com/shimajima-eiji/Hosting/commit/de6d8c2e773038ce68d5462766278f7e64fffe89) [2020/08/12][man-month] JSONPを廃止してCORSにも対応、グローバル変数を使わずhidden要素に格納するよう変更 (@shimajima-eiji)
-- [a612564](https://github.com/shimajima-eiji/Hosting/commit/a612564f535621df6c74bfe7e71e1b618fa675f5) [2020/08/12][man-month] 最低賃金に対応 (@shimajima-eiji)
-- [eaac567](https://github.com/shimajima-eiji/Hosting/commit/eaac567eded28dae1e16039fe8ab1539114335cd) [2020/08/12][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
-- [594d5f3](https://github.com/shimajima-eiji/Hosting/commit/594d5f36342294caeb1a4302d62327070dcb8478) [2020/08/12][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
+- [72f436c](https://github.com/shimajima-eiji/Hosting/commit/72f436c26f77735303bb5f814322143977e5d1ea) [2020/08/14][CHANGELOG] 最新化 (@shimajima-eiji)
+- [a920a2e](https://github.com/shimajima-eiji/Hosting/commit/a920a2e282b89dddae891dd277305348f46b2888) [2020/08/13] ライブラリ情報を追記 (@shimajima-eiji)
+- [91a0a33](https://github.com/shimajima-eiji/Hosting/commit/91a0a33c6f39df0c77bf96fc2ed081d436304d2d) [ver13][2020/08/13] cheeriogsを採用 (@shimajima-eiji)
+- [141abe8](https://github.com/shimajima-eiji/Hosting/commit/141abe83d12a983497e319916f0c79108f6808d3) [ver12][2020/08/12] CORSに対応。ソースではなくGASアプリ公開設定側を変更している (@shimajima-eiji)
+- [2a6200f](https://github.com/shimajima-eiji/Hosting/commit/2a6200fe1c5a2fb5e75c059f8f638ac5c57d309d) [2020/08/12] タイムトリガーをREADMEの通り設定、運用を見守る (@shimajima-eiji)
+- [fdd08da](https://github.com/shimajima-eiji/Hosting/commit/fdd08da489adb5be639484a656c7e4391a064b89) [ver8][2020/08/11] 広く使ってほしいのに認証とCORSに引っかかったのでJSONPを採用 (@shimajima-eiji)
+- [3345032](https://github.com/shimajima-eiji/Hosting/commit/334503222be20d519d5cc5d9fbf88e163c732da9) [2020/08/11] 関数名とファイル名が一致していると挙動がおかしくなるので変更 (@shimajima-eiji)
+- [08a6a3b](https://github.com/shimajima-eiji/Hosting/commit/08a6a3b44c33bef0c917d68f4bf348bb9f283274) [2020/08/11] set.gsがGASEditorで認識されないのでいったん削除 (@shimajima-eiji)
+- [191eba9](https://github.com/shimajima-eiji/Hosting/commit/191eba903ac3d86f08f2ae5a71ad047906607654) Create set.gs (@shimajima-eiji)
+- [3a6db9e](https://github.com/shimajima-eiji/Hosting/commit/3a6db9ebdc7678f1dce375fa29e86e923ae660ed) [2020/08/11] frst commit (@shimajima-eiji)
 - [cbd5a03](https://github.com/shimajima-eiji/Hosting/commit/cbd5a03c9028b8d2b304eaddc8aab82238c6c075) [2020/08/10][man-month] Chrome拡張に対応 (@shimajima-eiji)
 - [80ddddc](https://github.com/shimajima-eiji/Hosting/commit/80ddddcfda8c8a285d59f6bc763598ee6d33d558) Update README.md (@shimajima-eiji)
 - [87ca02a](https://github.com/shimajima-eiji/Hosting/commit/87ca02aeb57f66e20c201bae0a36d2994fe2dccd) Merge branch 'master' of https://github.com/shimajima-eiji/Hosting (@shimajima-eiji)
