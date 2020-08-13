@@ -90,8 +90,8 @@ export default {
 
       // 一覧のページング
       const pages = await axios
-        .get( `https://nomuraya-tutorial.microcms.io/api/v1/test?limit=0`, {
-          headers: { 'X-API-KEY': '6615a5a4-b894-445e-b979-24612d1a018c' },
+        .get( `${URL}?limit=0`, {
+          headers: { 'X-API-KEY': API_KEY },
         } )
         .then( ( res ) =>
           range( 1, Math.ceil( res.data.totalCount / limit ) ).map( ( p ) => ( {
@@ -105,6 +105,7 @@ export default {
   /*
   ** APIキーの隠蔽
   ** https://microcms.io/blog/nuxt-secure-api-key
+  ** これではNetlifyにデプロイ時にエラーになるので、privateRuntimeConfigは見送り
   */
   privateRuntimeConfig: {
     url: URL,
