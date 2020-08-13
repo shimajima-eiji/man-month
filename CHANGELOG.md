@@ -1,6 +1,19 @@
-## Change Log
+## 更新履歴
 
-### upcoming (2020/07/24 12:57 +00:00)
+### 最終更新 2020年8月14日
+- [a920a2e](https://github.com/shimajima-eiji/Hosting/commit/a920a2e282b89dddae891dd277305348f46b2888) [2020/08/13] ライブラリ情報を追記 (@shimajima-eiji)
+- [91a0a33](https://github.com/shimajima-eiji/Hosting/commit/91a0a33c6f39df0c77bf96fc2ed081d436304d2d) [ver13][2020/08/13] cheeriogsを採用 (@shimajima-eiji)
+- [141abe8](https://github.com/shimajima-eiji/Hosting/commit/141abe83d12a983497e319916f0c79108f6808d3) [ver12][2020/08/12] CORSに対応。ソースではなくGASアプリ公開設定側を変更している (@shimajima-eiji)
+- [2a6200f](https://github.com/shimajima-eiji/Hosting/commit/2a6200fe1c5a2fb5e75c059f8f638ac5c57d309d) [2020/08/12] タイムトリガーをREADMEの通り設定、運用を見守る (@shimajima-eiji)
+- [fdd08da](https://github.com/shimajima-eiji/Hosting/commit/fdd08da489adb5be639484a656c7e4391a064b89) [ver8][2020/08/11] 広く使ってほしいのに認証とCORSに引っかかったのでJSONPを採用 (@shimajima-eiji)
+- [3345032](https://github.com/shimajima-eiji/Hosting/commit/334503222be20d519d5cc5d9fbf88e163c732da9) [2020/08/11] 関数名とファイル名が一致していると挙動がおかしくなるので変更 (@shimajima-eiji)
+- [08a6a3b](https://github.com/shimajima-eiji/Hosting/commit/08a6a3b44c33bef0c917d68f4bf348bb9f283274) [2020/08/11] set.gsがGASEditorで認識されないのでいったん削除 (@shimajima-eiji)
+- [191eba9](https://github.com/shimajima-eiji/Hosting/commit/191eba903ac3d86f08f2ae5a71ad047906607654) Create set.gs (@shimajima-eiji)
+- [3a6db9e](https://github.com/shimajima-eiji/Hosting/commit/3a6db9ebdc7678f1dce375fa29e86e923ae660ed) [2020/08/11] frst commit (@shimajima-eiji)
+- [cbd5a03](https://github.com/shimajima-eiji/Hosting/commit/cbd5a03c9028b8d2b304eaddc8aab82238c6c075) [2020/08/10][man-month] Chrome拡張に対応 (@shimajima-eiji)
+- [80ddddc](https://github.com/shimajima-eiji/Hosting/commit/80ddddcfda8c8a285d59f6bc763598ee6d33d558) Update README.md (@shimajima-eiji)
+- [87ca02a](https://github.com/shimajima-eiji/Hosting/commit/87ca02aeb57f66e20c201bae0a36d2994fe2dccd) Merge branch 'master' of https://github.com/shimajima-eiji/Hosting (@shimajima-eiji)
+- [3819631](https://github.com/shimajima-eiji/Hosting/commit/381963187f99d9cbb12b7998e88be9256c8469d4) [2020/07/24] CHANGELOGを最新化 (@shimajima-eiji)
 - [285495b](https://github.com/shimajima-eiji/Hosting/commit/285495ba1e0f5b5591a82bf8f32d41dfe3bab40a) Delete index.html (@shimajima-eiji)
 - [74cfeeb](https://github.com/shimajima-eiji/Hosting/commit/74cfeebbaec99dd882d9d70cb5574b1452954bdc) Delete .htaccess (@shimajima-eiji)
 - [08f6cba](https://github.com/shimajima-eiji/Hosting/commit/08f6cbab3cb06ca31a55382c1668e5a2a41549c9) Update .htaccess (@shimajima-eiji)
