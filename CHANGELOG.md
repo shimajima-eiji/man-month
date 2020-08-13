@@ -1,6 +1,9 @@
-## Change Log
+## 更新履歴
 
-### upcoming (2020/07/24 12:57 +00:00)
+### 最終更新 2020年8月14日
+- [2697352](https://github.com/shimajima-eiji/Hosting/commit/26973521964d528305e59cb620d9afa33e9da2c6) [2020/07/31][ver1.0.0] 運用開始 (@shimajima-eiji)
+- [87ca02a](https://github.com/shimajima-eiji/Hosting/commit/87ca02aeb57f66e20c201bae0a36d2994fe2dccd) Merge branch 'master' of https://github.com/shimajima-eiji/Hosting (@shimajima-eiji)
+- [3819631](https://github.com/shimajima-eiji/Hosting/commit/381963187f99d9cbb12b7998e88be9256c8469d4) [2020/07/24] CHANGELOGを最新化 (@shimajima-eiji)
 - [285495b](https://github.com/shimajima-eiji/Hosting/commit/285495ba1e0f5b5591a82bf8f32d41dfe3bab40a) Delete index.html (@shimajima-eiji)
 - [74cfeeb](https://github.com/shimajima-eiji/Hosting/commit/74cfeebbaec99dd882d9d70cb5574b1452954bdc) Delete .htaccess (@shimajima-eiji)
 - [08f6cba](https://github.com/shimajima-eiji/Hosting/commit/08f6cbab3cb06ca31a55382c1668e5a2a41549c9) Update .htaccess (@shimajima-eiji)
