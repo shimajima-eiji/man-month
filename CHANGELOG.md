@@ -32,6 +32,7 @@
 ## 更新履歴
 
 ### 最終更新 2020年8月16日
+- [b85ea26](https://github.com/shimajima-eiji/Hosting/commit/b85ea26dfae5cd1c45d547ef4867c4975e6f836b) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
 - [cffa169](https://github.com/shimajima-eiji/Hosting/commit/cffa1692c574b398913e5592c1c9ac0b8bd2dd63) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
 - [3e0981c](https://github.com/shimajima-eiji/Hosting/commit/3e0981c8fc9a03a84a38e24c5408eb8f228f698c) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
 - [9aa5f7a](https://github.com/shimajima-eiji/Hosting/commit/9aa5f7a911ac96ecd7ac0027098d2a93a81a3d16) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
