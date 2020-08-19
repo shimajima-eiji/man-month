@@ -90,8 +90,8 @@ export default {
 
       // 一覧のページング
       const pages = await axios
-        .get( `${URL}?limit=0`, {
-          headers: { 'X-API-KEY': API_KEY },
+        .get( `${process.env.url}?limit=0`, {
+          headers: { 'X-API-KEY': process.env.API_KEY },
         } )
         .then( ( res ) =>
           range( 1, Math.ceil( res.data.totalCount / limit ) ).map( ( p ) => ( {
