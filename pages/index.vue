@@ -22,106 +22,108 @@
 </template>
 
 <script>
-import axios from 'axios'
+  import axios from 'axios'
 
-export default {
-  // サイトの情報を作成する
-  async asyncData( params ) {
-    // console.log(params);  // ページにアクセスするとデバッグできる
-    const page = Number(params.params.p || '1')
-    const limit = 1
-
-    const { data } = await axios.get(
-      `${process.env.url}?limit=${limit}&offset=${(page - 1) * limit}`,
-      {
-        headers: { 'X-API-KEY': process.env.apiKey }
-      }
-    );
-
-    /**
-     * ページネーション
-     * 本当はvue-paginateとかvuejs-paginateとかVuetify使いたいけど、挙動不明のエラー？に阻まれしゃーなしに作成
-     */
-    function paginate( page, limit, total )
+  export default {
+    // サイトの情報を作成する
+    async asyncData( params )
     {
-      const add = ( page, text ) => result.push( { url: page, value: text } );
-      const last = Math.ceil( total / limit );
-      const margin = 2;
-      const result = [];
-      var prev = false;
-      var next = false;
+      // console.log(params);  // ページにアクセスするとデバッグできる
+      const page = Number( params.params.p || '1' )
+      const limit = 1
 
-      for ( var i = ( page - margin ); i <= ( page + margin ); i++ )
+      const { data } = await axios.get(
+        `${process.env.url}?limit=${limit}&offset=${( page - 1 ) * limit}`,
+        {
+          headers: { 'X-API-KEY': process.env.apiKey }
+        }
+      );
+
+      /**
+       * ページネーション
+       * 本当はvue-paginateとかvuejs-paginateとかVuetify使いたいけど、挙動不明のエラー？に阻まれしゃーなしに作成
+       */
+      function paginate( page, limit, total )
       {
-        if ( i < 1 || i == page || last < i ) continue
+        const add = ( page, text ) => result.push( { url: page, value: text } );
+        const last = Math.ceil( total / limit );
+        const margin = 2;
+        const result = [];
+        var prev = false;
+        var next = false;
 
-        add( i, i )
-        if ( i < page ) prev = true
-        if ( i > page ) next = true;
+        for ( var i = ( page - margin ); i <= ( page + margin ); i++ )
+        {
+          if ( i < 1 || i == page || last < i ) continue
+
+          add( i, i )
+          if ( i < page ) prev = true
+          if ( i > page ) next = true;
+        }
+        if ( prev ) result.unshift( { page: 1, text: "First" } )
+        if ( result.length > 0 && ( result[ 0 ].page + 1 < result[ 1 ].page ) ) result.splice( 1, 0, { page: "#", text: "..." } )
+
+        if ( next ) add( last, "Last" )
+        if ( result.length > 0 && ( result[ result.length - 2 ].page + 1 < result[ result.length - 1 ].page ) ) result.splice( result.length - 1, 0, { page: "#", text: "..." } )
+        return result;
       }
-      if ( prev ) result.unshift( { page: 1, text: "First" } )
-      if ( result.length > 0 && (result[ 0 ].page + 1 < result[ 1 ].page) ) result.splice( 1, 0, { page: "#", text: "..." } )
 
-      if ( next ) add( last, "Last" )
-      if ( result.length > 0 && (result[ result.length - 2 ].page + 1 < result[ result.length - 1 ].page )) result.splice( result.length - 1, 0, { page: "#", text: "..." } )
-      return result;
-    }
-
-    return {
-      ...data,
-      pages: paginate(page, limit, data.totalCount),
+      return {
+        ...data,
+        pages: paginate( page, limit, data.totalCount ),
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
-.main {
-  width: 960px;
-  margin: 0 auto;
-}
-
-.title {
-  margin-bottom: 20px;
-}
-
-.publishedAt {
-  margin-bottom: 40px;
-}
-
-.post {
-  & > h1 {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 40px 0 20px;
-    background-color: #eee;
-    padding: 10px 20px;
-    border-radius: 5px;
+  .main {
+    width: 960px;
+    margin: 0 auto;
   }
 
-  & > h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 40px 0 16px;
-    border-bottom: 1px solid #ddd;
+  .title {
+    margin-bottom: 20px;
   }
 
-  & > p {
-    line-height: 1.8;
-    letter-spacing: 0.2px;
+  .publishedAt {
+    margin-bottom: 40px;
   }
 
-  & > ol {
-    list-style-type: decimal;
-    list-style-position: inside;
-  }
-}
+  .post {
+    &>h1 {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 40px 0 20px;
+      background-color: #eee;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
 
-.paginate ul li {
-  list-style-type: none;
-  float: left;
-  border: 1px solid blue;
-  margin-right: 10px;
-  padding: 10px;
-}
+    &>h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 40px 0 16px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    &>p {
+      line-height: 1.8;
+      letter-spacing: 0.2px;
+    }
+
+    &>ol {
+      list-style-type: decimal;
+      list-style-position: inside;
+    }
+  }
+
+  .paginate ul li {
+    list-style-type: none;
+    float: left;
+    border: 1px solid blue;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
 </style>
