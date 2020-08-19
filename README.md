@@ -30,3 +30,19 @@
   - コマンド: : `curl "https://nomuraya-tutorial.microcms.io/api/v1/test" -H "X-API-KEY: 6615a5a4-b894-445e-b979-24612d1a018c"`
 - 下書きページ: http://localhost:3000/draft
 - 下書きページを見る: http://localhost:3000/draft?draftKey=ukzdca1sE5
+
+# Netlifyに於けるnodejsのバージョン指定
+[.nvmrc](https://github.com/shimajima-eiji/Hosting/blob/microCMS-tutorial/.nvmrc)で指定できる。
+開発環境に合わせるなら`node -v >.nvmrc`とする。
+
+## nodeのバージョンを最新にする場合（安定版）
+最新版にすると動かなくなるパッケージがあるので、必要でなければ安定版を推奨。
+
+```
+sudo npm install -g n
+sudo n install stable
+sudo n
+# インストールされたバージョンを選択する
+node -v
+```
+

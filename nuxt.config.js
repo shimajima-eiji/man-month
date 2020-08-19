@@ -60,6 +60,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    // ビルドキャッシュを保存
     hardSource: true,
   },
 
@@ -109,7 +110,7 @@ export default {
   /*
   ** APIキーの隠蔽
   ** https://microcms.io/blog/nuxt-secure-api-key
-  ** これではNetlifyにデプロイ時にエラーになるので、privateRuntimeConfigは見送り
+  ** `npm run dev`を実施するなら、envに直すこと
   */
   privateRuntimeConfig: {
     url: URL,
