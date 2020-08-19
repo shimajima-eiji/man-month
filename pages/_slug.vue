@@ -1,15 +1,20 @@
 <template>
   <main class="main">
     <h1 class="title">{{ title }}</h1>
-    <p class="publishedAt">{{ publishedAt }}</p>
-    <p class="tag">{{ tag && tag.name }}</p>
-    <ul class="lists">
-      <li :class="`list ${item.name}`" v-for="item in toc" :key="item.id">
-        <n-link v-scroll-to="`#${item.id}`" to>
-          {{ item.text }}
-        </n-link>
-      </li>
+    <ul class="tag">
+      <li v-for="tag in tags">{{ tag }}</li>
     </ul>
+    <p class="publishedAt">{{ publishedAt }}</p>
+    <nav>
+      <h1>目次</h1>
+      <ul class="lists">
+        <li :class="`list ${item.name}`" v-for="item in toc" :key="item.id">
+          <n-link v-scroll-to="`#${item.id}`" to>
+            {{ item.text }}
+          </n-link>
+        </li>
+      </ul>
+    </nav>
     <div class="post" v-html="body"></div>
   </main>
 </template>
@@ -26,9 +31,18 @@ import 'highlight.js/styles/hybrid.css';
 export default {
   async asyncData(params) {
     // console.log(params);  // ページにアクセスするとデバッグできる
+
+    // microCMSの下書きを画面プレビューで見れるように変更
+    let draftKey="";
+    if(params.hasOwnProperty('ssrContext')) {
+      draftKey=params.ssrContext.req.url.split("?");
+      draftKey = (draftKey.length>1)
+      ? `?${draftKey[1]}`
+      : "";
+    }
     try {
       const { data } = await axios.get(
-        `${process.env.url}/${params.params.slug}`,
+        `${process.env.url}/${params.params.slug}${draftKey}`,
         {
           headers: { 'X-API-KEY': process.env.apiKey }
         }

@@ -1,0 +1,35 @@
+[
+  {
+    "fieldId": "title",
+    "name": "タイトル",
+    "kind": "text"
+  },
+  {
+    "fieldId": "body",
+    "name": "本文",
+    "kind": "textArea"
+  },
+  {
+    "fieldId": "tags",
+    "name": "タグ",
+    "kind": "select",
+    "description": "タグを増やす場合はAPIスキーマの選択肢より追加してください。",
+    "referenceKey": "API#d147a3e9-914a-4fd6-86c6-1e1bdd202949",
+    "selectItems": [
+      {
+        "id": "jBOXBkAxE",
+        "value": "未設定"
+      },
+      {
+        "id": "YImNpwU6S",
+        "value": "チュートリアル"
+      }
+    ],
+    "multipleSelect": true
+  },
+  {
+    "fieldId": "toc",
+    "name": "目次の表示",
+    "kind": "boolean"
+  }
+]

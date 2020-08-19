@@ -27,7 +27,7 @@ import axios from 'axios'
 export default {
   // サイトの情報を作成する
   async asyncData( params ) {
-    // console.log(params);
+    // console.log(params);  // ページにアクセスするとデバッグできる
     const page = Number(params.params.p || '1')
     const limit = 1
 
