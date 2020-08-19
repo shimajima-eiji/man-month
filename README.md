@@ -2,7 +2,7 @@
 予め[microCMS](https://microcms.io)などAPIを設定しておく。
 <br>作成時は[APIスキーマ](https://github.com/shimajima-eiji/Hosting/blob/APIスキーマ.json)の通り作成する。
 
-## 初期設定
+## ローカル・開発環境設定
 - ダウンロード
   - `git clone https://github.com/shimajima-eiji/Hosting.git -b microCMS-tutorial`
 - [.env](https://github.com/shimajima-eiji/Hosting/blob/microCMS-tutorial/.env)にmicroCMSで作った変数を入れる
@@ -46,3 +46,15 @@ sudo n
 node -v
 ```
 
+# Netlify設定
+- [公開ページ](https://nomuraya-microcms-tutorial.netlify.app/)
+## デプロイ時のログで`nuxt generate`から進まない
+開発（ローカル）環境でdistが作れるなら、distだけをNetlifyに渡してホスティングさせる手がある。
+
+- Build & deploy
+  - Continuous Deployment
+    - Build settings
+      - Build command: (none)
+      - Publish directory: dist
+
+と設定すると静的ファイルだけホスティングさせる事ができる。
