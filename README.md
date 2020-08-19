@@ -14,7 +14,6 @@
   - `npm run dev`
 - distを作ってnetlifyに上げる
   - `npm run generate`
-```
 
 ## 画面プレビュー
 1. [ターミナル] `npm run dev`を実行する
@@ -27,6 +26,7 @@
 公開済みのページやdraftKeyをパラメーターに設定していない下書きは表示されない。
 
 ## 使用例
-- 一覧ページ取得: `curl "https://nomuraya-tutorial.microcms.io/api/v1/test" -H "X-API-KEY: 6615a5a4-b894-445e-b979-24612d1a018c"` で`id: draft`が取得されていない（下書き中）
+- 一覧ページ取得で`id: draft`が取得されていない（下書き中のもの）
+  - コマンド: : `curl "https://nomuraya-tutorial.microcms.io/api/v1/test" -H "X-API-KEY: 6615a5a4-b894-445e-b979-24612d1a018c"`
 - 下書きページ: http://localhost:3000/draft
 - 下書きページを見る: http://localhost:3000/draft?draftKey=ukzdca1sE5
