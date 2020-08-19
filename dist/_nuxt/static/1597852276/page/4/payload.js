@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/page/4", (function(a,b,c,d){return {data:[{contents:[{id:"1st",createdAt:b,updatedAt:"2020-08-19T09:48:48.350Z",publishedAt:b,title:"1つ目の記事",body:"# ないよう　が　ないよう\n目次が表示されます",tags:["チュートリアル"],toc:true}],totalCount:4,offset:a,limit:c,pages:[{page:c,text:"First"},{url:d,value:d},{url:a,value:a}]}],fetch:[],mutations:void 0}}(3,"2020-08-13T02:43:05.661Z",1,2)));

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/page/undefined", (function(a){return {data:[{contents:[{id:"for-paging",createdAt:a,updatedAt:"2020-08-13T14:11:32.202Z",publishedAt:a,title:"ページング用に記事追加",body:"limit=3でやってみる",tags:[],toc:false}],totalCount:4,offset:0,limit:1,pages:[]}],fetch:[],mutations:void 0}}("2020-08-13T06:30:09.956Z")));
