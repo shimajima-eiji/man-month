@@ -25,7 +25,7 @@
   import marked from 'marked'
   import cheerio from 'cheerio';
   import hljs from 'highlight.js'
-  import moment from 'moment'
+  import moment from 'dayjs'
   import 'highlight.js/styles/hybrid.css';
 
   export default {

@@ -97,10 +97,12 @@ export default {
         {
           let start = 1;
           let end = Math.ceil( res.data.totalCount / limit );
+          console.log( end );
           let range = [ ...Array( start, end ) ].map( ( _, i ) => start + i );
-          let result = range.map( ( p ) => ( {
-            route: `/page/${p}`,
-          } ) );
+          let result = range.map( ( p ) =>
+          {
+            return { route: `/page/${p}` }
+          } );
           return result;
         } )
       return pages
