@@ -33,9 +33,9 @@
       const limit = 1
 
       const { data } = await axios.get(
-        `${process.env.url}?limit=${limit}&offset=${( page - 1 ) * limit}`,
+        `${params.$config.url}?limit=${limit}&offset=${( page - 1 ) * limit}`,
         {
-          headers: { 'X-API-KEY': process.env.apiKey }
+          headers: { 'X-API-KEY': params.$config.apiKey }
         }
       );
 

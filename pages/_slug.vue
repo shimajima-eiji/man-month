@@ -37,17 +37,20 @@
       let draftKey = "";
       if ( params.hasOwnProperty( 'ssrContext' ) )
       {
-        draftKey = params.ssrContext.req.url.split( "?" );
-        draftKey = ( draftKey.length > 1 )
-          ? `?${draftKey[ 1 ]}`
-          : "";
+        if ( params.ssrContext.hasOwnProperty( 'req' ) )
+        {
+          draftKey = params.ssrContext.req.url.split( "?" );
+          draftKey = ( draftKey.length > 1 )
+            ? `?${draftKey[ 1 ]}`
+            : "";
+        }
       }
       try
       {
         const { data } = await axios.get(
-          `${process.env.url}/${params.params.slug}${draftKey}`,
+          `${params.$config.url}/${params.params.slug}${draftKey}`,
           {
-            headers: { 'X-API-KEY': process.env.apiKey }
+            headers: { 'X-API-KEY': params.$config.apiKey }
           }
         )
 
