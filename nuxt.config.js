@@ -85,8 +85,6 @@ export default {
     async routes ()
     {
       const limit = 1
-      const range = ( start, end ) =>
-        [ ...Array( end - start + 1 ) ].map( ( _, i ) => start + i )
 
       // 一覧のページング
       const pages = await axios
@@ -95,12 +93,14 @@ export default {
         } )
         .then( ( res ) =>
         {
-          console.log( res );
-          range( 1, Math.ceil( res.data.totalCount / limit ) ).map( ( p ) => ( {
+          let start = 1;
+          let end = Math.ceil( res.data.totalCount / limit );
+          let range = [ ...Array( start, end ) ].map( ( _, i ) => start + i );
+          let result = range.map( ( p ) => ( {
             route: `/page/${p}`,
-          } ) )
-        }
-        )
+          } ) );
+          return result;
+        } )
       return pages
     },
   },
