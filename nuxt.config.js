@@ -94,9 +94,12 @@ export default {
           headers: { 'X-API-KEY': API_KEY },
         } )
         .then( ( res ) =>
+        {
+          console.log( res );
           range( 1, Math.ceil( res.data.totalCount / limit ) ).map( ( p ) => ( {
             route: `/page/${p}`,
           } ) )
+        }
         )
       return pages
     },
