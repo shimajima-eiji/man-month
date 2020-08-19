@@ -60,6 +60,8 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    // thread-loaderを有効化
+    parallel: true,
     // ビルドキャッシュを保存
     hardSource: true,
   },
@@ -97,7 +99,6 @@ export default {
         {
           let start = 1;
           let end = Math.ceil( res.data.totalCount / limit );
-          console.log( end );
           let range = [ ...Array( start, end ) ].map( ( _, i ) => start + i );
           let result = range.map( ( p ) =>
           {
