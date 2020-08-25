@@ -72,47 +72,51 @@
 ## 更新履歴
 
 ### v2020/08/26 2020年8月26日
-- [13e6f1d](https://github.com/shimajima-eiji/Hosting/commit/13e6f1dfcc8bbac4ae58d11bc24da24b380da0e7) [2020/08/25][CHANGELOG] 最新化 (@shimajima-eiji)
+- [67c3b03](https://github.com/shimajima-eiji/Hosting/commit/67c3b0375e8bef3cbc6f12a8c6809854fcc8016a) [2020/08/25] rename file (@shimajima-eiji)
+- [433028b](https://github.com/shimajima-eiji/Hosting/commit/433028b8a0968a51099cefa38776b572b3105ef8) [2020/08/25][ver13] first commit (@shimajima-eiji)
+- [228e76e](https://github.com/shimajima-eiji/Hosting/commit/228e76e7bae5340886a0d4d02d504faf246891aa) [2020/08/25][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/25 2020年8月25日
-- [55ff9bc](https://github.com/shimajima-eiji/Hosting/commit/55ff9bc921471359802901f7cae7759f75567ac2) [2020/08/24][CHANGELOG] 最新化 (@shimajima-eiji)
+- [9ecd629](https://github.com/shimajima-eiji/Hosting/commit/9ecd629f4df55e844cd5ca654d245fbf0038befe) [2020/08/24][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/24 2020年8月24日
-- [8fadfe1](https://github.com/shimajima-eiji/Hosting/commit/8fadfe1ee3c17d5fa645488fe0e330c50f100099) [2020/08/23][CHANGELOG] 最新化 (@shimajima-eiji)
+- [c7fc292](https://github.com/shimajima-eiji/Hosting/commit/c7fc292f527818557abe59ffd94084f3e4d57caf) [2020/08/23][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/23 2020年8月23日
-- [6eb29ab](https://github.com/shimajima-eiji/Hosting/commit/6eb29abb572fae92587d37ebcd73efc59d7adf10) [2020/08/22][CHANGELOG] 最新化 (@shimajima-eiji)
+- [faa1704](https://github.com/shimajima-eiji/Hosting/commit/faa17040c906e25477edb2d62fdeb76e52421462) [2020/08/22][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/22 2020年8月22日
-- [40eb81a](https://github.com/shimajima-eiji/Hosting/commit/40eb81abe4cc9101abbfcc70aeffd4409d65fb5f) [2020/08/21][CHANGELOG] 最新化 (@shimajima-eiji)
+- [8800ca5](https://github.com/shimajima-eiji/Hosting/commit/8800ca510abc871cb7be81adecd18ec18bd5d193) [2020/08/21][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/21 2020年8月21日
-- [eaca27e](https://github.com/shimajima-eiji/Hosting/commit/eaca27ebac62460a9bc9fc894a4a6a1a5298fd2d) [2020/08/20][CHANGELOG] 最新化 (@shimajima-eiji)
+- [a347e6a](https://github.com/shimajima-eiji/Hosting/commit/a347e6ae0262962eaf5e07df53cc3748a799765b) [2020/08/20][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/20 2020年8月20日
-- [80d07fa](https://github.com/shimajima-eiji/Hosting/commit/80d07fac7b8f455d50fddc0421625f4334f83433) [2020/08/19][CHANGELOG] 最新化 (@shimajima-eiji)
+- [e023459](https://github.com/shimajima-eiji/Hosting/commit/e0234599f310a283bea475536704a5e0b64d1317) [2020/08/19][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/19 2020年8月19日
-- [5566579](https://github.com/shimajima-eiji/Hosting/commit/5566579475da2a8e87044eadc65ff6055f8a2353) [2020/08/18][CHANGELOG] 最新化 (@shimajima-eiji)
+- [8404c54](https://github.com/shimajima-eiji/Hosting/commit/8404c54d43452d14b9b69ff04d7b77eff9a684a2) [2020/08/18][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/18 2020年8月18日
-- [199c180](https://github.com/shimajima-eiji/Hosting/commit/199c180da246dafbc623e010afb9e393535ea294) [2020/08/17][CHANGELOG] 最新化 (@shimajima-eiji)
+- [4f70808](https://github.com/shimajima-eiji/Hosting/commit/4f7080817a598bfbf6d4406b3d93d2bbff057d70) [2020/08/17][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/17 2020年8月17日
-- [4bf82c5](https://github.com/shimajima-eiji/Hosting/commit/4bf82c5199fe24814abcad8d26fae45ed34102ca) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
-- [f877264](https://github.com/shimajima-eiji/Hosting/commit/f877264129ea811fc84122b22e615925b7bf84ef) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
+- [22c317f](https://github.com/shimajima-eiji/Hosting/commit/22c317f33de9104d8d3f3ca61b7628b6b965980e) Delete GAS-snippets.md (@shimajima-eiji)
+- [e5c283d](https://github.com/shimajima-eiji/Hosting/commit/e5c283d5c7e4d4f07707c6903c72ce31b6e28ee9) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
+- [c6fd688](https://github.com/shimajima-eiji/Hosting/commit/c6fd688cd4c66452eb618ea35b85bab47c642002) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
+- [b85ea26](https://github.com/shimajima-eiji/Hosting/commit/b85ea26dfae5cd1c45d547ef4867c4975e6f836b) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
+- [cffa169](https://github.com/shimajima-eiji/Hosting/commit/cffa1692c574b398913e5592c1c9ac0b8bd2dd63) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
+- [3e0981c](https://github.com/shimajima-eiji/Hosting/commit/3e0981c8fc9a03a84a38e24c5408eb8f228f698c) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
+- [9aa5f7a](https://github.com/shimajima-eiji/Hosting/commit/9aa5f7a911ac96ecd7ac0027098d2a93a81a3d16) [2020/08/16][CHANGELOG] 最新化 (@shimajima-eiji)
 
 ### v2020/08/16 2020年8月16日
-- [72f436c](https://github.com/shimajima-eiji/Hosting/commit/72f436c26f77735303bb5f814322143977e5d1ea) [2020/08/14][CHANGELOG] 最新化 (@shimajima-eiji)
-- [a920a2e](https://github.com/shimajima-eiji/Hosting/commit/a920a2e282b89dddae891dd277305348f46b2888) [2020/08/13] ライブラリ情報を追記 (@shimajima-eiji)
-- [91a0a33](https://github.com/shimajima-eiji/Hosting/commit/91a0a33c6f39df0c77bf96fc2ed081d436304d2d) [ver13][2020/08/13] cheeriogsを採用 (@shimajima-eiji)
-- [141abe8](https://github.com/shimajima-eiji/Hosting/commit/141abe83d12a983497e319916f0c79108f6808d3) [ver12][2020/08/12] CORSに対応。ソースではなくGASアプリ公開設定側を変更している (@shimajima-eiji)
-- [2a6200f](https://github.com/shimajima-eiji/Hosting/commit/2a6200fe1c5a2fb5e75c059f8f638ac5c57d309d) [2020/08/12] タイムトリガーをREADMEの通り設定、運用を見守る (@shimajima-eiji)
-- [fdd08da](https://github.com/shimajima-eiji/Hosting/commit/fdd08da489adb5be639484a656c7e4391a064b89) [ver8][2020/08/11] 広く使ってほしいのに認証とCORSに引っかかったのでJSONPを採用 (@shimajima-eiji)
-- [3345032](https://github.com/shimajima-eiji/Hosting/commit/334503222be20d519d5cc5d9fbf88e163c732da9) [2020/08/11] 関数名とファイル名が一致していると挙動がおかしくなるので変更 (@shimajima-eiji)
-- [08a6a3b](https://github.com/shimajima-eiji/Hosting/commit/08a6a3b44c33bef0c917d68f4bf348bb9f283274) [2020/08/11] set.gsがGASEditorで認識されないのでいったん削除 (@shimajima-eiji)
-- [191eba9](https://github.com/shimajima-eiji/Hosting/commit/191eba903ac3d86f08f2ae5a71ad047906607654) Create set.gs (@shimajima-eiji)
-- [3a6db9e](https://github.com/shimajima-eiji/Hosting/commit/3a6db9ebdc7678f1dce375fa29e86e923ae660ed) [2020/08/11] frst commit (@shimajima-eiji)
+- [eb9d9e0](https://github.com/shimajima-eiji/Hosting/commit/eb9d9e0ea56f28844495ceab9df2a083ced8bb50) [2020/08/14][CHANGELOG][GAS-minimum_wage] 最新化 (@shimajima-eiji)
+- [20c9562](https://github.com/shimajima-eiji/Hosting/commit/20c956286a22b3dd0475945166e2e9bbb5247ebf) [2020/08/14][CHANGELOG][GAS-timetrigger] 最新化 (@shimajima-eiji)
+- [0e481e1](https://github.com/shimajima-eiji/Hosting/commit/0e481e17ea6921ff03b426efecc555199723b1f9) [2020/08/14][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
+- [de6d8c2](https://github.com/shimajima-eiji/Hosting/commit/de6d8c2e773038ce68d5462766278f7e64fffe89) [2020/08/12][man-month] JSONPを廃止してCORSにも対応、グローバル変数を使わずhidden要素に格納するよう変更 (@shimajima-eiji)
+- [a612564](https://github.com/shimajima-eiji/Hosting/commit/a612564f535621df6c74bfe7e71e1b618fa675f5) [2020/08/12][man-month] 最低賃金に対応 (@shimajima-eiji)
+- [eaac567](https://github.com/shimajima-eiji/Hosting/commit/eaac567eded28dae1e16039fe8ab1539114335cd) [2020/08/12][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
+- [594d5f3](https://github.com/shimajima-eiji/Hosting/commit/594d5f36342294caeb1a4302d62327070dcb8478) [2020/08/12][CHANGELOG][GAS-snippets] 最新化 (@shimajima-eiji)
 - [cbd5a03](https://github.com/shimajima-eiji/Hosting/commit/cbd5a03c9028b8d2b304eaddc8aab82238c6c075) [2020/08/10][man-month] Chrome拡張に対応 (@shimajima-eiji)
 - [80ddddc](https://github.com/shimajima-eiji/Hosting/commit/80ddddcfda8c8a285d59f6bc763598ee6d33d558) Update README.md (@shimajima-eiji)
 - [87ca02a](https://github.com/shimajima-eiji/Hosting/commit/87ca02aeb57f66e20c201bae0a36d2994fe2dccd) Merge branch 'master' of https://github.com/shimajima-eiji/Hosting (@shimajima-eiji)
