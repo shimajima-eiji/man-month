@@ -44,7 +44,8 @@ var notify_trash = function ( day )
   };
 
   var date = Snippets.Module.date().add( day, 'days' );  // dayの曜日(英語)を取得
-  var content = Snippets.microCMS().value( APIID, date.lang( "en" ).format( "dddd" ).toLowerCase() );
+  var key = date.lang( "en" ).format( "dddd" ).toLowerCase();
+  var content = Snippets.microCMS().value( APIID, key );
   if ( NOSEND.indexOf(content) > -1 ) return;  // includesが使えない
 
   var header = ( day ) ? MESSAGES.tommorow : MESSAGES.today;
@@ -56,11 +57,11 @@ var notify_trash = function ( day )
   // 週により指定がある場合
   var first_day = Snippets.Module.date(date.format("YYYY/MM/DD")).date(1);
   var week = Math.ceil((first_day.day() + date.date())/7);
-  var value = Snippets.microCMS().value("home", content + "_" + week);
+  var value = Snippets.microCMS().value(APIID, key + "_" + week);
   if(value) message = value;
 
   // 隔週の場合
-  if(content == "friday") content = content.split(" or ")[today.week()%2];
+  if(key == "friday") content = content.split(" or ")[date.week()%2];
 
   message = MESSAGES.pype + header + message + content + MESSAGES.footer + MESSAGES.pype;
   Snippets.Line().send( message, LINE_TOKEN );
