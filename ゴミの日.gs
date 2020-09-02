@@ -16,16 +16,21 @@
 - date: 今日か明日(day)の日付を取って、曜日を英語で受け取る
 - content: 曜日に対応するゴミ情報
 
-# TODO
-これはsnippetsの機能ではないため、外プロジェクトに移行する
+# 運用
+タイムトリガーではない関数はvarで変数名に格納する。
 
+# API
+[参照](https://github.com/shimajima-eiji/Hosting/wiki/[microCMS][GAS]-APIスキーマ（特殊例）)
+
+selectAPIで設定したコンテンツを呼べるようにしており、コンテンツ名はキーが流出しても都度変更して取得できないようにしている。
+API valueの内容は変更する必要がない。
 */
-function test(){
-  today = Snippets.Module.date();
-  var a = "燃えないゴミ or ペットボトル"
-  Logger.log();
-}
 
+/**
+ * ゴミの日通知
+ * @day(number): 今日なら0、明日なら1…のように、今日を起点として対象となる日付
+ * @return none
+ */
 var notify_trash = function ( day )
 {
   const NOSEND = ["なし", undefined];
@@ -61,6 +66,9 @@ var notify_trash = function ( day )
   Snippets.Line().send( message, LINE_TOKEN );
 }
 
+/**
+ * 以下、タイムトリガー
+ */
 function today ()
 {
   notify_trash( 0 );
