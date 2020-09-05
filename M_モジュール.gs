@@ -29,7 +29,7 @@ var Module = function ()
       print( "[_astype] 判別できないオブジェクトタイプです。: " + type );
       return false;
     }
-    Logger.log( typeOf[ type ] );
+    print( typeOf[ type ] );
     print( _istype( obj ) )
 
     return typeOf[ type ] == _istype( obj );

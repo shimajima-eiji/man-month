@@ -1,8 +1,4 @@
 /*
-# 更新履歴:コミットログ
-## [2020/07/27][ver0.1.0] trash:最適化/microCMS:呼び出しを簡素化/Module:astypeとエラーキャッチ
-運用開始。使い方: https://github.com/shimajima-eiji/Hosting/wiki/[共通]-github-changesが使えないサービスのバージョン管理
-
 # 初期設定
 ```
 var PROPERTIES = function() {
@@ -69,21 +65,31 @@ function howtouse ( target )
 _callだけ内向きのカテゴリで外向きの配列に入れている。
 これは、クライアント側でカスタムして使うことを想定しているが、使うべきではない。
 
-# 留意点
+# クイックスタート（サンプル）
+```
+function test(){
+  const SERVICE = "nomuraya-tutorial";
+  const APIKEY = "6615a5a4-b894-445e-b979-24612d1a018c";
 
+  var target = microCMS( SERVICE , APIKEY )
+  var content = target.content("test").contents;
+  target.get("for-paging", content, "test");
+  Logger.log(target.value("test", "for-paging", "title"))
+}
+```
 
 # TODO
 - https://github.com/shimajima-eiji/Hosting/issues/20
 
 */
 
-var microCMS = function ()
+var microCMS = function (service, key)
 {
   /***
   // 定数（運用）
   ***/
-  const SERVICE_ENDPOINT = "https://" + PROPERTIES.SERVICE_ID + ".microcms.io/api/v1/"
-  const HEADER = { headers: { "X-API-KEY": PROPERTIES.APIKEY } };
+  const SERVICE_ENDPOINT = "https://" + ((service) ? service : PROPERTIES.SERVICE_ID) + ".microcms.io/api/v1/"
+  const HEADER = { headers: { "X-API-KEY": (key) ? key : PROPERTIES.APIKEY } };
   const LIMIT = 100;
   const KEYID = "id";
   const CONTENTS = "contents";
@@ -92,7 +98,7 @@ var microCMS = function ()
   /***
   // 定数（関数向け）
   ***/
-  const simpleValue_contentId = "value";
+  const simpleValue_CONTENTID = "value";
   const ModuleFunction = {
     read: Module.array_read,
     find: Module.findValue_array
@@ -131,7 +137,9 @@ var microCMS = function ()
   };
   function _find ( contents, value )
   {
-    return local.write( ModuleFunction.find( contents, KEYID, value ) );
+    var result = ModuleFunction.find( contents, KEYID, value );
+    local.write( result );
+    return result;
   }
   const local =
   {
@@ -146,18 +154,27 @@ var microCMS = function ()
   /***
   // 外から呼び出せる固有の関数群。returnに入れる。指定がない限りfetchedを返す
   ***/
-  function fetchCall ( target, contents )
+
+  /**
+   * 指定したコンテンツAPIを取得し、キャッシュに格納する
+   * @target(str):   APIのコンテンツ名
+   * @contents(json): 対象コンテンツ
+   *
+   * @return(json): コンテンツ
+   */
+  function fetchCall ( id_value, contents, api_name )
   {
     if ( !contents ) contents = _contents( PROPERTY );
 
     // microCMSで設定しているコンテンツだけ配信する
-    var result = local.find( contents, target );
+    local.find( contents, id_value );
     if ( !local.read() || local.read().length == 0 )
     {
       print( "要素が存在しません" )
       return null;
     }
 
+    var target = (api_name) ? api_name : id_value;
     // 過去に未実施の場合だけAPIコール
     if ( !local.fetch()[ target ] )
     {
@@ -166,28 +183,46 @@ var microCMS = function ()
     }
     return local.fetch();
   };
+  
+  /**
+   * コンテンツ名のIDに該当するものを返す
+   * @contentId(str): 対象コンテンツ名
+   * @value(str):     対象コンテンツ内のID名
+   *
+   * @return(json):   ID名と一致するコンテンツ
+   */
   function find ( contentId, value )
   {
-    fetchCall( contentId );
+    if(!local.fetch()[contentId]) fetchCall( contentId );    
     local.find( local.contents( contentId ), value );
 
     if ( local.read() && local.read().length > 0 )
       return local.read()[ 0 ];
   };
-  function simpleValue ( contentId, value )
+  
+  /**
+   * コンテンツ名のIDに該当するものを返す
+   * @contentId(str): 対象コンテンツ名
+   * @value(str):     対象コンテンツ内のID名
+   *
+   * @return(json):   ID名と一致するコンテンツからvalueキーの値
+   */
+  function simpleValue ( contentId, value, target )
   {
+    target = (target) ? target : simpleValue_CONTENTID;
     var result = find( contentId, value );
-    if ( ModuleFunction.read( result, simpleValue_contentId ) )
-      return result[ simpleValue_contentId ];
+    if ( ModuleFunction.read( result, target ) )
+      return result[ target ];
   }
 
   // returnに乗せて外から呼び出せるもの
   var fetched = {
-    property: local.get( PROPERTIES.PERMISSION_CONTENTID ),
+    content: local.get,
     get: fetchCall,
     find: find,
     value: simpleValue
   };
+  if(!service && !key) fetched[PROPERTY] = local.get( PROPERTIES.PERMISSION_CONTENTID );
 
   return fetched;
 };

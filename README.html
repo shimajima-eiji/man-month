@@ -6,6 +6,13 @@
   - `[ver][*YYYYMMDD] 変更点`
   - verはバージョンを上げた際に必須、日付は作業履歴を残すため。github-changesを採用したいが、多分使えない。
 
+# 更新履歴:コミットログ
+## microCMS.gs
+### [2020/09/05][ver2.0.0][microCMS] 所定の呼び出し方以外（普通にURLfetchしたい場合も含め）に対応していない大問題に対応、使用例を追記
+
+### [2020/07/27][ver0.1.0] trash:最適化/microCMS:呼び出しを簡素化/Module:astypeとエラーキャッチ
+運用開始。使い方: https://github.com/shimajima-eiji/Hosting/wiki/[共通]-github-changesが使えないサービスのバージョン管理
+
 # ビジネスロジック指向を採用
 各ファイルを１つのクラスとみなして、ファイル名の関数を一つだけ配置する。
 テスト時は関数を呼び出すので、それぞれにnull値が格納された際の初期化を実施するようにする。
@@ -28,6 +35,16 @@ let microCMS = (arg1) => {
 # GASの設定
 V8ランタイムを適用すると実行速度が極端に遅くなるので不採用
 ただし、移行を前提とするため適宜デバッグすること
+
+## ライブラリ
+| ライブラリ名 | Ver | スクリプトID                                                |
+| ---        | --- | ---                                                       |
+| Moment     |   9 | 15hgNOjKHUG4UtyZl9clqBbl23sDvWMS8pfDJOyIapZk5RBqwL3i-rlCo |
+| SlackAPP   |  22 | 1on93YOYfSmV92R5q59NpKmsyWIQD8qnoLYk-gkQBI92C58SPyA2x1-bq |
+
+## 公開設定
+- Execute the app as: Me
+- Who has access to the app: 全ユーザー
 
 # Howto
 即時関数にしてreturnすればstaticなクラスのように振る舞うことができる。
