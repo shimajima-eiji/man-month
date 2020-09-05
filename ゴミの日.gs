@@ -18,7 +18,7 @@
 var notify_trash = function ( day )
 {
   const NOSEND = ["なし", undefined];
-  const APIID = "notify_trash";
+  const APIID = "home";
   const LINE_TOKEN = "notify_token_gas";
   const MESSAGES = {
     pype: "\n～～～～～～～～～～～～～～～～～\n",
