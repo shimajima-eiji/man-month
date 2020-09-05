@@ -1,0 +1,41 @@
+<!--
+# 更新履歴:コミットログ
+## [2020/09/05][ver0.3.0] 番組表の通知
+
+## [2020/09/05][ver0.2.0] 失業保険の残日数・番組表を通知
+プロジェクトのプロパティを使用する
+
+## [2020/09/02][ver0.1.0] 何週目・隔週といったケースに対応
+[解説](https://qiita.com/nomurasan/items/fc45214cf5f60a021bfd)
+
+## [2020/07/27][ver0.0.0] snippetsから移行
+運用開始。使い方: https://github.com/shimajima-eiji/Hosting/wiki/[共通]-github-changesが使えないサービスのバージョン管理
+
+# 運用
+トリガー.gs以外のファイルはvar変数に格納する。
+テストしたい場合は手間だがfunctionに書き直すかfunction test()を作って呼び出すようにする。
+
+# GASの設定
+V8ランタイムを適用すると実行速度が極端に遅くなるので不採用
+
+## ライブラリ
+| ライブラリ名 | Ver | スクリプトID                                                |
+| ---        | --- | ---                                                       |
+| snippetsv2 |   2 | 1w1z595ui1qOfk8m04CQQxB3TB2q-HowFIVbF9E-8HNcL7zLpaFWl4Gct |
+
+## 公開設定
+- Execute the app as: Me
+- Who has access to the app: 全ユーザー
+
+## プロジェクトのプロパティ
+- unemployment_start: (YYYY/MM/DD) 失業給付の待期の最終日
+- unemployment_serve: (Number) 所定給付日数欄
+
+## ゴミの日
+
+# API
+[参照](https://github.com/shimajima-eiji/Hosting/wiki/[microCMS][GAS]-APIスキーマ（特殊例）)
+
+selectAPIで設定したコンテンツを呼べるようにしており、コンテンツ名はキーが流出しても都度変更して取得できないようにしている。
+API valueの内容は変更する必要がない。
+-->
