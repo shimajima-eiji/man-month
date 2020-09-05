@@ -7,11 +7,13 @@
   - verはバージョンを上げた際に必須、日付は作業履歴を残すため。github-changesを採用したいが、多分使えない。
 
 # 更新履歴:コミットログ
-## microCMS.gs
-### [2020/09/05][ver2.0.0][microCMS] 所定の呼び出し方以外（普通にURLfetchしたい場合も含め）に対応していない大問題に対応、使用例を追記
+## README
+- [2020/09/05][ver2.0.1][README] [表記を統一](https://github.com/shimajima-eiji/Hosting/wiki/[GAS]-管理手引)
 
-### [2020/07/27][ver0.1.0] trash:最適化/microCMS:呼び出しを簡素化/Module:astypeとエラーキャッチ
-運用開始。使い方: https://github.com/shimajima-eiji/Hosting/wiki/[共通]-github-changesが使えないサービスのバージョン管理
+## microCMS.gs
+- [2020/09/05][ver2.0.0][microCMS] 所定の呼び出し方以外（普通にURLfetchしたい場合も含め）に対応していない大問題に対応、使用例を追記
+- [2020/07/27][ver0.1.0] trash:最適化/microCMS:呼び出しを簡素化/Module:astypeとエラーキャッチ
+  - 運用開始。使い方: https://github.com/shimajima-eiji/Hosting/wiki/[共通]-github-changesが使えないサービスのバージョン管理
 
 # ビジネスロジック指向を採用
 各ファイルを１つのクラスとみなして、ファイル名の関数を一つだけ配置する。
@@ -45,6 +47,12 @@ V8ランタイムを適用すると実行速度が極端に遅くなるので不
 ## 公開設定
 - Execute the app as: Me
 - Who has access to the app: 全ユーザー
+
+## プロジェクトのプロパティ
+- APIKEY: microCMSのサービスAPIキー
+- SERGVICE_ID: microCMSのサービス名
+- PERMISSION_CONTENTID: GASで許可するAPIを設定したAPI名
+- DEBUG: true / false
 
 # Howto
 即時関数にしてreturnすればstaticなクラスのように振る舞うことができる。
