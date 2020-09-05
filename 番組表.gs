@@ -1,4 +1,4 @@
-function notify_tv(){
+var notify_tv = function(){
   const LINE_TOKEN = "notify_token_gas";
   const SERVICE_ID = "nomuraya-tutorial";
   const APIKEY = "6615a5a4-b894-445e-b979-24612d1a018c";
@@ -27,7 +27,7 @@ function notify_tv(){
     }
     return tmp;
   }).join("\n");
-  Logger.log(today.format("【番組表 YYYY年M月D日】") + "\n" + message);
+  message = "\n" + today.format("【番組表 YYYY年M月D日】") + "\n" + message;
 
   Snippets.Line().send( message, LINE_TOKEN );
 }
