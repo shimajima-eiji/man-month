@@ -4,7 +4,7 @@
 var unemployment_insurance = function() {
   const BENEFIT_STARTDATE = PropertiesService.getScriptProperties().getProperty("unemployment_start");
   const BENEFIT_SERVEDATE = PropertiesService.getScriptProperties().getProperty("unemployment_serve");
-  const LINE_TOKEN = "notify_token_gas";
+  const LINE_TOKEN = PropertiesService.getScriptProperties().getProperty("line_token");
 
   var today = Snippets.Module.date();
   var enddate=Snippets.Module.date(BENEFIT_STARTDATE).add(Number(BENEFIT_SERVEDATE), 'days');  

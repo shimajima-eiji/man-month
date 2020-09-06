@@ -19,7 +19,7 @@ var notify_trash = function ( day )
 {
   const NOSEND = ["なし", undefined];
   const APIID = "home";
-  const LINE_TOKEN = "notify_token_gas";
+  const LINE_TOKEN =　PropertiesService.getScriptProperties().getProperty("line_token");
   const MESSAGES = {
     pype: "\n～～～～～～～～～～～～～～～～～\n",
     today: "今日は",
