@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>microCMSのコンテンツをインポート用のCSVにエクスポートする</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>microCMSコンテンツエクスポーター</h1>
+    <form name="form" action="#" onsubmit="run(); return false">
+      <div class="input-group align-items-center">
+        <label for="url">エンドポイント：</label><input id="url" onblur="nullcheck(this)"
+          value="https://nomuraya-tutorial.microcms.io/api/v1/test" />
+      </div>
+      <div class="input-group align-items-center">
+        <label for="apikey">APIキー：</label><input id="apikey" onblur="nullcheck(this)"
+          value="6615a5a4-b894-445e-b979-24612d1a018c" />
+      </div>
+      <div class="input-group align-items-center">
+        <button>取得</button>
+      </div>
+      <div class="input-group align-items-center">
+        <textarea name="csv" class="csv"></textarea>
+      </div>
+    </form>
+    <h1>既知の問題</h1>
+    <ul>
+      <li>
+        画像は公式のinput-formatで対応していません。
+        <br>curlの内容からでは判別できないため、取得しようとしますがinportは失敗しますので、csvを書き換えてください。
+      </li>
+      <li>
+        セレクトフィールドで複数を選択している場合、選択している数だけ一つずつ項目がズレます。
+        <br>これは公式のinput-formatで対応できないためです。
+      </li>
+    </ul>
+  </body>
+  <script src="script.js"></script>
+
+</html>
