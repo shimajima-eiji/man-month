@@ -1,0 +1,45 @@
+<!--
+ラッパーモジュール(WM)_スプレッドシート
+
+# 更新履歴:コミットログ
+## README
+- [2020/09/08][ver1.0.0] 運用開始
+
+## コード.gs
+- [2020/09/08][ver1.0.0] 運用開始
+
+# プロジェクトキー
+MrG7GqO2F_loT-XZqykU6sNUxI5FlYOV2
+
+# クイックスタート
+```
+function test() {
+  const SS_Key;  // X部分: https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  const sheet_name;
+
+  var SS = SpreadSheet(SS_Key, sheet_name);
+  Logger.log(SS.get(true).add(["A", ""]).add(["", "B"]).set().preview());
+}
+```
+
+# 運用方針
+[共通規格](https://github.com/shimajima-eiji/Hosting/wiki/[GAS]-管理手引)に基づき作成
+
+## Github設定
+- プッシュ先
+  - `Hosting/GAS-spreadsheet
+- 公開・コミットメッセージ
+  - `[ver][YYYYMMDD] 変更点`
+  - verはバージョンを上げた際は必須、日付は作業履歴
+
+## 使用ライブラリ
+なし
+
+## 公開設定
+- Execute the app as: Me
+- Who has access to the app: 全ユーザー
+
+## プロジェクトのプロパティ
+なし
+
+-->
