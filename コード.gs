@@ -1,6 +1,7 @@
 // # Usege
 function quickstart ()
 {
+  /*
   // X部分のみ: https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   const SS_Key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   const sheet_name = "シート1";
@@ -10,7 +11,8 @@ function quickstart ()
   SS.get( true );
   SS.add( [ "A", "" ] ).add( [ "", "B" ] );
   SS.set();
-  Logger.log( SS.preview().data );
+  Logger.log( SS.preview().json);
+  */
 }
 
 /**
@@ -24,11 +26,14 @@ var SpreadSheet = function ( SS_Key, sheet_name )
 {
   if ( !SS_Key ) return;
 
+  const csv2jsons = Convert.csv2jsons
   const SS = SpreadsheetApp.openById( SS_Key );
   var sheet,
     data = [],  // set_sheetで初期化されなかった場合にエラーになる
     length = 0,  // set_sheetで初期化されなかった場合にエラーになる
     sheetdata,
+    json,
+    jsonSheet,
     result;
   /**
    * @why: 作業中に同一ブック内のシートを変更する事を想定。改めて作り直しても良いが選択肢は多いほうが良い。
@@ -65,8 +70,13 @@ var SpreadSheet = function ( SS_Key, sheet_name )
       var row = sheet.getLastRow();
       var col = sheet.getLastColumn();
       sheetdata = ( row == 0 || col == 0 ) ? [] : sheet.getRange( 1, 1, row, col ).getValues()
+      jsonSheet = csv2jsons(sheetdata);
+
     }
-    if ( data_flag ) data = sheetdata;
+    if ( data_flag ) {
+      data = sheetdata;
+      json = jsonSheet;
+    }
     return this;
   }
   /**
@@ -107,12 +117,15 @@ var SpreadSheet = function ( SS_Key, sheet_name )
    */
   function preview ()
   {
-    return {
+    var result = {
       length: length,
       sheetdata: ( sheetdata ) ? sheetdata : "[HELP] get()を使用してスプレッドシートにアクセスできます",
       data: ( data.length ) ? data : "[HELP] add(array)を使用してデータを追記できます",
       result: ( result == undefined ) ? result : "[HELP] 直前のadd(array)の成否判定ができます",
+      json: json,
+      jsonSheet: jsonSheet,
     };
+    return result;
   }
 
   return {
