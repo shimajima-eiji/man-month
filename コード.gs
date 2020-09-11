@@ -1,3 +1,18 @@
+// # Usege
+function quickstart ()
+{
+  // X部分のみ: https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  const SS_Key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+  const sheet_name = "シート1";
+
+  // SpreadSheet関数はthisを返すので、内容を照会したい場合はpreviewを呼び出す。いわゆるtoString
+  var SS = SpreadSheet( SS_Key, sheet_name );
+  SS.get( true );
+  SS.add( [ "A", "" ] ).add( [ "", "B" ] );
+  SS.set();
+  Logger.log( SS.preview().data );
+}
+
 /**
  * @use: ライブラリ読み込みをしている全てのスクリプト
  * @params:

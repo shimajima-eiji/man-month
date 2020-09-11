@@ -3,24 +3,18 @@
 
 # 更新履歴:コミットログ
 ## README
-- [2020/09/08][ver1.0.0] 運用開始
+- [ver1.0.1][2020/09/11] 使い方がわかりにくいので改善
+- [ver1.0.0][2020/09/08] 運用開始
 
 ## コード.gs
-- [2020/09/08][ver1.0.0] 運用開始
+- [ver1.0.1][2020/09/11] 使い方がわかりにくいので改善
+- [ver1.0.0][2020/09/08] 運用開始
 
 # プロジェクトキー
 MrG7GqO2F_loT-XZqykU6sNUxI5FlYOV2
 
 # クイックスタート
-```
-function test() {
-  const SS_Key;  // X部分: https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  const sheet_name;
-
-  var SS = SpreadSheet(SS_Key, sheet_name);
-  Logger.log(SS.get(true).add(["A", ""]).add(["", "B"]).set().preview());
-}
-```
+コード.quickstart();
 
 # 運用方針
 [共通規格](https://github.com/shimajima-eiji/Hosting/wiki/[GAS]-管理手引)に基づき作成
@@ -40,6 +34,6 @@ function test() {
 - Who has access to the app: 全ユーザー
 
 ## プロジェクトのプロパティ
-なし
+なし（シートIDとシート名は呼び出し元から引数として与える）
 
 -->
