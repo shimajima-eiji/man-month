@@ -1,8 +1,9 @@
 // # Usege
 function quickstart ()
 {
-  const testData = [["A","" ], ["", "B"], ["A","" ], ["", "B"]];
+  const testData = [["A","" ], ["", "B"], ["A","B" ], ["", ""]];
   Logger.log( csv2jsons(testData) );
+  Logger.log( csv2string(testData) );
 }
 
 /**
@@ -10,7 +11,7 @@ function quickstart ()
  *   json(json)
  * @return string
  */
-function json2jsonString ( json )
+function json2string ( json )
 {
   return JSON.stringify( json );
 }
@@ -20,9 +21,9 @@ function json2jsonString ( json )
  *   jsons(array): 要素はjson
  * @return string
  */
-function jsons2jsonString ( json )
+function jsons2string ( json )
 {
-  return json.map( function ( obj ) { return json2jsonString( obj ); } ).join( "\n" );
+  return json.map( function ( obj ) { return json2string( obj ); } ).join( "\n" );
 }
 
 /**
@@ -43,6 +44,12 @@ function json2csv ( json, header )
   result.unshift();
   if ( header ) result.shift( headers );
   return result;
+}
+
+function csv2string(csv) {
+  return csv.map(function (property) {
+    return (Array.isArray(property) && property.length > 0 && Array.isArray(property[0])) ? csv2string(property) : property.join(",");
+  }).join("\n");
 }
 
 /**
