@@ -1,9 +1,0 @@
-{
-  "name": "マイクロな拡張機能",
-  "version": "1.0",
-  "description": "拡張機能として入れるためだけの超マイクロなマニフェスト",
-  "manifest_version": 2,
-  "browser_action": {
-    "default_popup": "popup.html"
-  }
-}

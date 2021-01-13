@@ -1,9 +1,0 @@
-{
-  "name": "人月計算",
-  "version": "1.0",
-  "description": "求人サイトやスカウトの案件で給与と年収が一致しない時に比較するスクリプト",
-  "manifest_version": 2,
-  "browser_action": {
-    "default_popup": "index.html"
-  }
-}
