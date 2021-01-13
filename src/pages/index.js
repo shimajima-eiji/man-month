@@ -9,7 +9,7 @@ const IndexPage = ( query ) => (
   <Layout>
     <SEO title="Home" />
     <h1>インデックスでクエリを実行するだけ</h1>
-    <p>結果： { query.data.site.siteMetadata.title }</p>
+    <p>結果： { query.data.microcmsMain.mainId }</p>
     <p>画像要らなさそうだけど一応そのままにしておく</p>
     <div style={ { maxWidth: `300px`, marginBottom: `1.45rem` } }>
       <Image />
@@ -23,10 +23,8 @@ export default IndexPage
 
 export const query = graphql`
 query {
-  site {
-    siteMetadata {
-      title
-    }
+  microcmsMain {
+    mainId
   }
 }
 `;

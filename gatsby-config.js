@@ -1,3 +1,5 @@
+require( "dotenv" ).config()
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -30,5 +32,18 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-microcms", // FYI: https://qiita.com/akifumiyoshimu/items/ecb07219185c43cecfec
+      options: {
+        apiKey: process.env.GATSBY_API_KEY, // dotenv
+        serviceId: process.env.GATSBY_SERVICE_ID, // dotenv
+        apis: [ {
+          endpoint: "main",
+          query: {
+            limit: 100,
+          },
+        } ],
+      },
+    },
   ],
 }
