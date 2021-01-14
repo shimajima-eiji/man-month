@@ -5832,6 +5832,11 @@ follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.1.tgz#5f69b813376cee4fd0474a3aba835df04ab763b7"
   integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
 
+fontsource-kosugi@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/fontsource-kosugi/-/fontsource-kosugi-4.0.0.tgz#35d8e60f9bf28f020c0a1c5143caa80e4d201613"
+  integrity sha512-wCsw7zGNRS0wbBPmEyEnLDx3wL3rVGCxultUHlUBE4EEAUWajsKqOc91OhLNxwGFQ2WBjg5OG4twpMlRc7xGGw==
+
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"

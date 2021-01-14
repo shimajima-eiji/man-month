@@ -2,10 +2,11 @@ require( "dotenv" ).config()
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    url: `https://dev-nomuraya-diary.netlify.app`,
+    title: `インターネット老人おぢさん`,
+    description: `元CEOののむらやごろうがフロントエンドを触らなさすぎて若手にバカにされないために頑張るおっさんの独学プログラミング奮闘記`,
+    author: `のむらやごろう`,
+    url: `https://speedtest-netlify.netlify.app`,
+    twitterUsername: `elder_uncle`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
