@@ -69,11 +69,11 @@ module.exports = {
           "@pages": "src/pages",
           "@images": "src/images",
           "@templates": "src/templates",
-          "@font": "src/fonts",
         },
         extensions: [ "js", "jsx", "ts", "tsx" ],
       }
     },
     `gatsby-plugin-image`, // FYI: https://ebisu.com/note/new-gatsby-image/
+    // `gatsby-plugin-emotion`,  // FYI: https://www.gatsbyjs.com/plugins/gatsby-plugin-emotion/
   ],
 }

@@ -7,7 +7,40 @@ import SEO from "@components/seo"
 import PAGINATION from "@components/pagination"
 import Share from "@components/share"
 
+////  css in JS(emotion)  ////
 import Style from "./blog-post.module.css"
+/*
+import { css } from "@emotion/react";  // need: @emotion/react FYI: https://blog.ojisan.io/s-c-kigo
+const Style_container = css`
+  background-color: lightblue;
+  border: solid 2px;
+  border-radius: 2vh;
+  padding: 10px;
+  h1, h2 {
+    padding: 1rem 2rem;
+    border: 3px solid #000;
+    border-radius: 50vw 0 0 50vw;
+    background-color: yellowgreen;
+    font-size: 5vh;
+  }
+
+  h1:first-letter, .container h2:first-letter {
+    font-size: 150%;
+    border: 1px solid green;
+    border-radius: 10vw;
+    background-color: lime;
+  }
+`
+
+const Style_contents = css`
+  img {
+    max-width: 640px;
+    max-height: 480px;
+    width: auto;
+    height: auto;
+  }
+`
+*/
 
 export default ( { pageContext } ) =>
 {

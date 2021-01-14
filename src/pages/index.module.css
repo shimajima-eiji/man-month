@@ -1,10 +1,24 @@
-* {
-  font-family: kosugi;
-}
+/* @font-face {
+  font-family: 'Kosugi';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/kosugi-v6-latin_japanese-regular.eot');
+  src: local(''), url('../fonts/kosugi-v6-latin_japanese-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/kosugi-v6-latin_japanese-regular.woff2') format('woff2'),
+  url('../fonts/kosugi-v6-latin_japanese-regular.woff') format('woff'),
+  url('../fonts/kosugi-v6-latin_japanese-regular.ttf') format('truetype'),
+  url('../fonts/kosugi-v6-latin_japanese-regular.svg#Kosugi') format('svg');
+} */
 
 .container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.container * {
+  letter-spacing: -0.1em;
+  text-align: justify;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto;
 }
 
 .profile {
