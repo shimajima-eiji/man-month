@@ -1,9 +1,9 @@
 # スピードテスト
 - [いつもの](https://developers.google.com/speed/pagespeed/insights/?hl=ja)
-- [検証サイト](https://5fff31c28df2360a8f7f0980--speedtest-netlify.netlify.app)
+- [検証サイト](https://5fffaa3cc1c3c6156416a2a6--speedtest-netlify.netlify.app)
 
 # 2021/01/14 02:48時点の検証結果
-<img width="843" alt="スクリーンショット 2021-01-14 2 48 50" src="https://user-images.githubusercontent.com/15845907/104489600-2a5c6e00-5613-11eb-8d09-df2b2bee9ee0.png">
-<img width="849" alt="スクリーンショット 2021-01-14 2 49 00" src="https://user-images.githubusercontent.com/15845907/104489609-2d575e80-5613-11eb-878a-cdf6433f3dd9.png">
+<img width="672" alt="スクリーンショット 2021-01-14 11 27 33" src="https://user-images.githubusercontent.com/15845907/104536627-b85c4700-565b-11eb-87d6-f31985f2d2fb.png">
+<img width="672" alt="スクリーンショット 2021-01-14 11 27 43" src="https://user-images.githubusercontent.com/15845907/104536631-babea100-565b-11eb-9226-5a01bf0d0801.png">
 
-[microCMSに変えたからと言って差があるわけではない。](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-graphql-speedtest/README.md)
+[画像をAPIで取ってきて表示するのも問題ないので、次はページ生成部分を見てみる](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-microcms-speedtest/README.md)
