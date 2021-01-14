@@ -1,0 +1,58 @@
+* {
+  font-family: kosugi;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile {
+  border: solid 2px;
+  border-radius: 2vh;
+  padding: 10px;
+  background-color: lightgoldenrodyellow;
+}
+
+@media (min-width: 960px) {
+  .contents {
+    max-width: 720px;
+  }
+  .profile {
+    width: 200px;
+  }
+}
+
+.profile_image {
+  margin-bottom: 10px;
+}
+
+.information {
+  border: solid 2px;
+  background-color: lightskyblue;
+  border-radius: 1vh;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 20px;
+  font-size: 36px
+}
+
+.blog_list {
+  background-color: lightblue;
+  border: solid 2px;
+  border-radius: 2vh;
+  padding: 10px;
+  margin-bottom: 3px;
+  display: flex;
+}
+
+.blog_list span {
+  font-size: 16px;
+}
+
+.blog_list img {
+  max-width: 300px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}

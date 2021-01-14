@@ -5,6 +5,7 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    url: `https://dev-nomuraya-diary.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -45,5 +46,21 @@ module.exports = {
         } ],
       },
     },
+    {
+      resolve: `gatsby-plugin-alias-imports`,  // FYI: https://webcraftlog.net/best-gatsbyjs-plugins/
+      options: {
+        alias: {
+          "@src": "src",
+          "@components": "src/components",
+          "@layouts": "src/layouts",
+          "@pages": "src/pages",
+          "@images": "src/images",
+          "@templates": "src/templates",
+          "@posts": "content/posts",
+        },
+        extensions: [ "js", "jsx", "ts", "tsx" ],
+      }
+    },
+    `gatsby-plugin-image`, // FYI: https://ebisu.com/note/new-gatsby-image/
   ],
 }
