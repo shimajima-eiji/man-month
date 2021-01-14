@@ -9,4 +9,15 @@
 ついに拒否されてしまった。<BR />
 これでは計測ができない。
 
-[前回：重い原因はフォントのせい](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-font-speedtest/README.md)
+# デフォルトフォントを表示させるようにして再挑戦
+https://github.com/shimajima-eiji/Hosting/commit/63889f226b70fa034fabe9d9fe5cac2bdd934c08 で読み込めたら処理させるようにする
+
+[検証サイト](https://5fffccafe47d7f00073f4748--speedtest-netlify.netlify.app)
+
+実機で確認してみたが、期待した動作をしている。<BR />
+とりあえず読ませられるけど端末の処理速度の問題だろうか、モバイルとPCのスコアの違いを体感で理解する事ができた。
+
+<img width="723" alt="スクリーンショット 2021-01-14 13 49 46" src="https://user-images.githubusercontent.com/15845907/104546386-67564e00-566f-11eb-81a3-d79a48f9db4b.png">
+<img width="730" alt="スクリーンショット 2021-01-14 13 49 54" src="https://user-images.githubusercontent.com/15845907/104546390-69b8a800-566f-11eb-876f-638d35543d94.png">
+
+[前回：重い原因はフォントの**読み込み**が原因だと分かる。](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-font-speedtest/README.md)
