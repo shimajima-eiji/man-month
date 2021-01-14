@@ -24,4 +24,4 @@ https://github.com/shimajima-eiji/Hosting/commit/63889f226b70fa034fabe9d9fe5cac2
 やはりCDNを使う方法を検討したほうが良さそうだ。
 
 [前回：重い原因はフォントの**読み込み**が原因だと分かる。](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-font-speedtest/README.md)<BR />
-[次回：Webフォントでも爆速で読み込ませたい](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-font-speedtest/README.md)
+[次回：Webフォントでも爆速で読み込ませたい](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-webfont-speedtest/README.md)
