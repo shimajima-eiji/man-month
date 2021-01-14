@@ -16,4 +16,5 @@
 <img width="679" alt="スクリーンショット 2021-01-14 12 02 45" src="https://user-images.githubusercontent.com/15845907/104539410-cf516800-5660-11eb-9c10-fb1b02874c79.png">
 
 埋め込みありのページが遅いのは当然か。<BR>
-とはいえ、その他のページは[indexだけを作った場合と比較しても大差ない](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-index-speedtest/README.md)ので、プラグインに問題があると考えるのが自然だろう。
+とはいえ、その他のページは[indexだけを作った場合と比較しても大差ない](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-index-speedtest/README.md)ので、プラグインに問題があると考えるのが自然だろう。<BR>
+[次はレイアウトにフォントを入れて全体のパフォーマンスを測る](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-font-speedtest/README.md)
