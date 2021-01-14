@@ -1,9 +1,12 @@
 # スピードテスト
 - [いつもの](https://developers.google.com/speed/pagespeed/insights/?hl=ja)
-- [検証サイト](https://5fff31c28df2360a8f7f0980--speedtest-netlify.netlify.app)
+- [検証サイト](https://5fffbc85bfe349253e6a266c--speedtest-netlify.netlify.app)
 
-# 2021/01/14 02:48時点の検証結果
-<img width="843" alt="スクリーンショット 2021-01-14 2 48 50" src="https://user-images.githubusercontent.com/15845907/104489600-2a5c6e00-5613-11eb-8d09-df2b2bee9ee0.png">
-<img width="849" alt="スクリーンショット 2021-01-14 2 49 00" src="https://user-images.githubusercontent.com/15845907/104489609-2d575e80-5613-11eb-878a-cdf6433f3dd9.png">
+# 2021/01/14 13:00時点の検証結果
+<img width="675" alt="スクリーンショット 2021-01-14 12 57 26" src="https://user-images.githubusercontent.com/15845907/104543089-1a22ae00-5668-11eb-8b52-0c204fc0a604.png">
+<img width="677" alt="スクリーンショット 2021-01-14 12 57 37" src="https://user-images.githubusercontent.com/15845907/104543091-1c850800-5668-11eb-9893-c8be5243d74e.png">
 
-[microCMSに変えたからと言って差があるわけではない。](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-graphql-speedtest/README.md)
+体感で分かるレベルで遅くなった。原因はフォント。<BR>
+フォント、人騒がせなやつである。
+  
+[ローカルで呼び出すようにしてみた](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-localfont-speedtest/README.md)
