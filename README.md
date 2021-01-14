@@ -8,4 +8,4 @@
 <img width="672" alt="スクリーンショット 2021-01-14 11 27 33" src="https://user-images.githubusercontent.com/15845907/104536627-b85c4700-565b-11eb-87d6-f31985f2d2fb.png">
 <img width="672" alt="スクリーンショット 2021-01-14 11 27 43" src="https://user-images.githubusercontent.com/15845907/104536631-babea100-565b-11eb-9226-5a01bf0d0801.png">
 
-[前回の結果と比較して画像をAPIで取ってきて表示するのも問題ない](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-microcms-speedtest/README.md)ので、[次はページ生成部分を見てみる](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-full-speedtest/README.md)
+[前回の結果と比較して画像をAPIで取ってきて表示するのも問題ない](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-microcms-speedtest/README.md)ので、[次はページ生成部分を見てみる](https://github.com/shimajima-eiji/Hosting/blob/netilfy-gatsby-full-speedtest/README.md)
