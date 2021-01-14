@@ -1,8 +1,11 @@
 /* FYI: https://www.gatsbyjs.com/docs/how-to/styling/using-local-fonts/ */
 
 @font-face {
+  /* FYI: https://fonts.google.com/?subset=japanese */
   font-family: "kosugi";
   src: url("../fonts/Kosugi-Regular.ttf");
+  /* FYI: https://qiita.com/oreo/items/2e82bfeb42e351557c3c */
+  font-display: swap;
 }
 
 html {
