@@ -3,7 +3,7 @@
 @font-face {
   /* FYI: https://fonts.google.com/?subset=japanese */
   font-family: "kosugi";
-  src: url("../fonts/Kosugi-Regular.ttf");
+  src: local("../fonts/Kosugi-Regular.ttf");
   /* FYI: https://qiita.com/oreo/items/2e82bfeb42e351557c3c */
   font-display: swap;
 }
