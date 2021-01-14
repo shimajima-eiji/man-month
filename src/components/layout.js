@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import 'fontsource-kosugi'  // fontsource-○○で持ってこれる。 FYI: https://fonts.google.com/?subset=japanese
 
 import Header from "./header"
 import "./layout.css"
