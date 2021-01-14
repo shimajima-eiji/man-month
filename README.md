@@ -1,6 +1,6 @@
 # スピードテスト
 - [いつもの](https://developers.google.com/speed/pagespeed/insights/?hl=ja)
-- [検証サイト](https://5fff31c28df2360a8f7f0980--speedtest-netlify.netlify.app)
+- [検証サイト](https://5fffb343f74aab160f13c1ff--speedtest-netlify.netlify.app)
 
 # 2021/01/14 12:00時点の検証結果
 ## index
