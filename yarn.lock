@@ -1469,6 +1469,15 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
+"@mako-tos/gatsby-transformer-for-microcms@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@mako-tos/gatsby-transformer-for-microcms/-/gatsby-transformer-for-microcms-1.1.0.tgz#90b9db5bf29161347e06d9f10ddc81098e0bd872"
+  integrity sha512-SzqsoxX05hsJ92phdDmut9pX1+qAVTYl7uPAiRctYmSkMQNreYGtLcOkGo4IGlDWTs+Vi/CWhUsVvGR2a8tD5w==
+  dependencies:
+    cheerio "^1.0.0-rc.3"
+    highlight.js "^10.0.3"
+    node-fetch "^2.6.0"
+
 "@mdx-js/util@^2.0.0-next.8":
   version "2.0.0-next.8"
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-2.0.0-next.8.tgz#66ecc27b78e07a3ea2eb1a8fc5a99dfa0ba96690"
@@ -7051,6 +7060,11 @@ hicat@^0.7.0:
   dependencies:
     highlight.js "^8.1.0"
     minimist "^0.2.0"
+
+highlight.js@^10.0.3:
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.5.0.tgz#3f09fede6a865757378f2d9ebdcbc15ba268f98f"
+  integrity sha512-xTmvd9HiIHR6L53TMC7TKolEj65zG1XU+Onr8oi86mYa+nLcIbxTTWkpW7CsEwv/vK7u1zb8alZIMLDqqN6KTw==
 
 highlight.js@^8.1.0:
   version "8.9.1"
@@ -13279,6 +13293,11 @@ urix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
+
+url-join@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.1.tgz#b642e21a2646808ffa178c4c5fda39844e12cde7"
+  integrity sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==
 
 url-loader@^1.1.2:
   version "1.1.2"

@@ -47,6 +47,18 @@ module.exports = {
       },
     },
     {
+      resolve: '@mako-tos/gatsby-transformer-for-microcms',  // FYI: https://qiita.com/mako-tos/items/aa2cf761fc082d32ac71
+      options: {
+        mediaType: 'MicrocmsMain', // 必須 string 型
+        field: 'body', // 必須 string 型
+        useHljs: true, // 任意 boolean 型
+        image: {
+          sizes: '80vw', // 任意 string 型
+          loading: 'auto', // 任意 string 型
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-alias-imports`,  // FYI: https://webcraftlog.net/best-gatsbyjs-plugins/
       options: {
         alias: {

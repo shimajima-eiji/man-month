@@ -9,7 +9,7 @@ import
   TwitterIcon,
   LineShareButton,
   LineIcon
-} from "react-share";
+} from "react-share";  // need: react-share
 
 const Share = ( { title, url } ) =>
 {
