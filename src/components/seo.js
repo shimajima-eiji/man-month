@@ -1,33 +1,41 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import urlJoin from "url-join"  // need: url-join
 
-function SEO ( { description, lang, meta, title } )
+function SEO ( { title, description, url, image } )
 {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
+            defaultTitle: title
+            defaultDescription: description
+            baseUrl: url
+            lang
+            twitterUsername
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  // クエリから結果を取り出す
+  const {
+    defaultTitle,
+    defaultDescription,
+    baseUrl,
+    defaultImage,
+    lang,
+    twitterUsername,
+  } = site.siteMetadata
+
+  // 引数とクエリを突合する
+  // titleは便利な機能が提供されているので、ここではさわらない
+  description = description || defaultDescription
+  url = urlJoin( baseUrl, url )
+  image = image || defaultImage
 
   return (
     <Helmet
@@ -39,7 +47,19 @@ function SEO ( { description, lang, meta, title } )
       meta={ [
         {
           name: `description`,
-          content: metaDescription,
+          content: description,
+        },
+        {
+          name: `image`,
+          content: image,
+        },
+        {
+          name: `og:image`,
+          content: image,
+        },
+        {
+          name: `og:url`,
+          content: url,
         },
         {
           property: `og:title`,
@@ -47,7 +67,7 @@ function SEO ( { description, lang, meta, title } )
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: description,
         },
         {
           property: `og:type`,
@@ -59,7 +79,7 @@ function SEO ( { description, lang, meta, title } )
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: twitterUsername,
         },
         {
           name: `twitter:title`,
@@ -67,25 +87,16 @@ function SEO ( { description, lang, meta, title } )
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: description,
         },
-      ].concat( meta ) }
+      ].concat( [] ) }
     >
     </Helmet>
   )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf( PropTypes.object ),
-  title: PropTypes.string.isRequired,
+  url: ``,  // urlJoinで結合しているので空文字が必要
 }
 
 export default SEO

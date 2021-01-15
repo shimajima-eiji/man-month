@@ -3,10 +3,12 @@ require( "dotenv" ).config()
 module.exports = {
   siteMetadata: {
     title: `インターネット老人おぢさん`,
-    description: `元CEOののむらやごろうがフロントエンドを触らなさすぎて若手にバカにされないために頑張るおっさんの独学プログラミング奮闘記`,
+    description: `元CEO現役フリーランスエンジニア兼講師兼Youtuber「のむらやごろう」です。プログラミングの楽しさと副業・転職の話をスクール、スカウト、採用の3つの目線で解説します。STEM教育（水耕栽培など家庭農業IoT）とイクメン活動に奔走中`,
     author: `のむらやごろう`,
     url: `https://speedtest-netlify.netlify.app`,
     twitterUsername: `elder_uncle`,
+    lang: `ja`,
+    image: `src/images/favicon.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -69,11 +71,12 @@ module.exports = {
           "@pages": "src/pages",
           "@images": "src/images",
           "@templates": "src/templates",
+          "@fonts": "src/fonts",  // FYI: https://github.com/KyleAMathews/typefaces/tree/master/packages
         },
         extensions: [ "js", "jsx", "ts", "tsx" ],
       }
     },
     `gatsby-plugin-image`, // FYI: https://ebisu.com/note/new-gatsby-image/
-    // `gatsby-plugin-emotion`,  // FYI: https://www.gatsbyjs.com/plugins/gatsby-plugin-emotion/
+    `gatsby-plugin-emotion`,  // FYI: https://www.gatsbyjs.com/plugins/gatsby-plugin-emotion/
   ],
 }

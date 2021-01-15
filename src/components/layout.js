@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import "./style.css"
 
 const Layout = ( { children } ) =>
 {
@@ -36,7 +37,11 @@ const Layout = ( { children } ) =>
           } }
         >
           {/* FYI: http://w-d-l.net/html__entities/ */ }
-          &copy; 2020-{ new Date().getFullYear() } { data.site.siteMetadata.author }(<Link to={ "https://twitter.com/" + data.site.siteMetadata.twitterUsername }>&#064;{ data.site.siteMetadata.twitterUsername }</Link>)
+          <p>&copy;
+          2020-{ new Date().getFullYear() }
+            { data.site.siteMetadata.author }
+          (<Link to={ "https://twitter.com/" + data.site.siteMetadata.twitterUsername }>&#064;{ data.site.siteMetadata.twitterUsername }</Link>)</p>
+          <p>当サイトの全てのコンテンツを転載・無断での引用もお断りしています。</p>
         </footer>
       </div>
     </>
