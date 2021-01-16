@@ -46,11 +46,6 @@ const Style_blog_list = css`
 `
 
 const Style_contents = css`
-  display: flex;
-
-  h1 {
-    font-size: 150%;
-  }
   span {
     font-size: 75%;
   }
@@ -58,18 +53,20 @@ const Style_contents = css`
   p {
     font-size: 110%;
   }
-  img {
+  img, div.gatsby-image-wrapper {
+    margin-left: 20px;
+    display: block;
+    float: right;
     max-width: 200px;
     max-height: 200px;
   }
-`
 
-const Style_detail = css`
   @media( min-width: 960px ) {
     max-width: 720px;
   }
 
   h1 {
+    font-size: 150%;
     border-top: double 5px;
     border-bottom: double 5px;
     border-left: solid 6px;
@@ -81,6 +78,7 @@ const Style_detail = css`
     font-family: "corp";
   }
 `
+
 const Style_link = css`
   padding: 1vw 2vh;
   border: 3px solid #000;
@@ -133,14 +131,10 @@ export default ( { data } ) =>
           {
             return (
               <article css={ Style_blog_list } id={ node.mainId } >
-                <div css={ Style_contents }>
-                  <div css={ [ Style_detail, Style_normal_text ] }>
-                    <Link to={ node.mainId }><h1>{ node.title }　<span>{ node.updatedAt }</span></h1></Link>
-                    <p>{ node.description || sumarrize( node.body ).slice( 0, 100 ) + '......' } </p>
-                  </div>
-                  <Link to={ node.mainId }><div>
+                <div css={ [ Style_contents, Style_normal_text ] }>
+                  <Link to={ node.mainId }>
                     { ( node.door )
-                      ? <img src={ node.door.url } alt={ node.title } />
+                      ? <img loading="lazy" src={ node.door.url } alt={ node.title } />
                       : <StaticImage
                         src={ noImage }
                         layout="fluid"
@@ -148,7 +142,8 @@ export default ( { data } ) =>
                         alt={ node.title }
                       />
                     }
-                  </div></Link>
+                    <h1>{ node.title }　<span>{ node.updatedAt }</span></h1></Link>
+                  <p>{ node.description || sumarrize( node.body ).slice( 0, 100 ) + '......' } </p>
                 </div>
                 <div css={ Style_link }><Link to={ node.mainId }>続きを読む　<span>({ node.body.length }文字</span>)</Link></div>
               </article>

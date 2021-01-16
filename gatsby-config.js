@@ -57,7 +57,6 @@ module.exports = {
         useHljs: true, // 任意 boolean 型
         image: {
           sizes: '80vw', // 任意 string 型
-          loading: 'auto', // 任意 string 型
         },
       },
     },
@@ -79,5 +78,34 @@ module.exports = {
     `gatsby-plugin-image`, // FYI: https://ebisu.com/note/new-gatsby-image/
     `gatsby-plugin-emotion`,  // FYI: https://www.gatsbyjs.com/plugins/gatsby-plugin-emotion/
     `gatsby-plugin-netlify-cache`,  // FYI: https://www.gatsbyjs.com/plugins/gatsby-plugin-netlify-cache/
+    {
+      resolve: `gatsby-plugin-canonical-urls`, // FYI: https://qiita.com/atomyah/items/69028992eacf28d92957
+      options: {
+        siteUrl: `https://nomuraya-diary.netlify.app`,
+        stripQueryString: true,
+      },
+    },
+    `gatsby-plugin-sitemap`,  // FYI: https://qiita.com/atomyah/items/69028992eacf28d92957
+    {
+      resolve: 'gatsby-plugin-robots-txt', // FYI: https://qiita.com/atomyah/items/69028992eacf28d92957
+      options: {
+        host: 'https://nomuraya-diary.netlify.app',
+        sitemap: 'https://nomuraya-diary.netlify.app/sitemap.xml',
+        policy: [ { userAgent: '*', allow: '/' } ]
+      }
+    },
+    `gatsby-plugin-offline`,  // FYI: https://webcraftlog.net/gatsby-seo-settings/
+    {
+      resolve: `gatsby-plugin-manifest`, // FYI: https://webcraftlog.net/gatsby-seo-settings/
+      options: {
+        name: "インターネット老人おじさん",
+        short_name: "ネット老人おぢ",
+        theme_color: "#2196f3",
+        background_color: "#2196f3",
+        start_url: "/",
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
+      },
+    },
   ],
 }

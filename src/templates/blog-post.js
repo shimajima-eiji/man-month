@@ -84,7 +84,7 @@ export default ( { pageContext } ) =>
             url={ url }
           />
           { ( door )
-            ? <img src={ door.url } alt={ title } />
+            ? <img src={ door.url } alt={ title } loading="lazy" />
             : <StaticImage
               src={ noImage }
               layout="fluid"
