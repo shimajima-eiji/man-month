@@ -14,13 +14,6 @@ import { css } from "@emotion/react";  // need: @emotion/react FYI: https://blog
 // 共通
 const Style_normal_text = css`
   text-align: justify;
-
-  p {
-    font-family: 'Komorebi';
-  }
-  h1, h2, h3, h4, h5 {
-    font-family: "corp";
-  }
 `
 
 // 固有
@@ -55,10 +48,6 @@ const Style_container = css`
   }
 `
 
-const Style_contents_head = css`
-  font-family: "corp";
-`
-
 const Style_tags = css`
   ul {
     display: flex;
@@ -88,7 +77,7 @@ export default ( { pageContext } ) =>
       />
       <div css={ Style_container }>
         <article>
-          <h1 css={ Style_contents_head }>{ title }</h1>
+          <h1>{ title }</h1>
           <p><span>最終更新:{ updatedAt }（初公開:{ publishedAt }）</span></p>
           <Share
             title={ sns_title }

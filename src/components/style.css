@@ -20,16 +20,13 @@ h1 Linkはaタグが優先されるため、JSXで別途指定する
 a:link, a:visited {
   color: black;
   text-decoration: none;
-  /* font-family: "Komorebi"; */
-  font-display: swap;
+  font-family: "Komorebi";
 }
 
 p {
-  /* font-family: 'Komorebi'; */
-  font-display: swap;
+  font-family: 'Komorebi';
 }
 
 h1, h2, h3, h4, h5 {
-  /* font-family: "corp"; */
-  font-display: swap;
+  font-family: "corp";
 }

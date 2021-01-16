@@ -78,5 +78,6 @@ module.exports = {
     },
     `gatsby-plugin-image`, // FYI: https://ebisu.com/note/new-gatsby-image/
     `gatsby-plugin-emotion`,  // FYI: https://www.gatsbyjs.com/plugins/gatsby-plugin-emotion/
+    `gatsby-plugin-netlify-cache`,  // FYI: https://www.gatsbyjs.com/plugins/gatsby-plugin-netlify-cache/
   ],
 }
