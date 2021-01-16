@@ -6,7 +6,7 @@ module.exports = {
     title: `インターネット老人おぢさん`,
     description: `元CEO現役フリーランスエンジニア兼講師兼Youtuber「のむらやごろう」です。プログラミングの楽しさと副業・転職の話をスクール、スカウト、採用の3つの目線で解説します。STEM教育（水耕栽培など家庭農業IoT）とイクメン活動に奔走中`,
     author: `のむらやごろう`,
-    url: `https://speedtest-netlify.netlify.app`,
+    siteUrl: `https://speedtest-netlify.netlify.app`,  // gatsby-plugin-canonical-urlsで使っているのでこちらに寄せる
     twitterUsername: `elder_uncle`,
     lang: `ja`,
     image: `src/images/favicon.png`,

@@ -12,7 +12,7 @@ function SEO ( { title, description, url, image } )
           siteMetadata {
             defaultTitle: title
             defaultDescription: description
-            baseUrl: url
+            baseUrl: siteUrl
             lang
             twitterUsername
           }

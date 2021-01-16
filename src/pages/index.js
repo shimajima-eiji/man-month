@@ -187,7 +187,7 @@ query {
     siteMetadata {
       author
       description
-      url
+      url: siteUrl
       title
     }
   }

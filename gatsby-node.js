@@ -20,7 +20,7 @@ exports.createPages = async ( { graphql, actions } ) =>
       site {
         siteMetadata {
           title
-          url
+          siteUrl
         }
       }
       allMicrocmsMain (sort: {order: DESC, fields: publishedAt}) {

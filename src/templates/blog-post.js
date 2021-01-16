@@ -64,7 +64,7 @@ export default ( { pageContext } ) =>
   const { title, description, childConvertHtml, door, mainId, updatedAt, publishedAt, tags } = pageContext.post
   const body = childConvertHtml.convertedHtml
   const sns_title = title + " #" + pageContext.site.title
-  const url = urlJoin( pageContext.site.url, mainId )
+  const url = urlJoin( pageContext.site.siteUrl, mainId )
   const image = door ? door.url : pageContext.site.image
   const noImage = "../images/icon.webp"
 
