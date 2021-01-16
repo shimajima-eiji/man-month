@@ -1,27 +1,22 @@
 # スピードテスト
 - [いつもの](https://developers.google.com/speed/pagespeed/insights/?hl=ja)
-- [検証サイト](https://5fffc1fdbfe34936016a210d--speedtest-netlify.netlify.app)
+- [検証サイト](https://6001df2814eaf35b9cab82af--speedtest-netlify.netlify.app)
 
-# 2021/01/14 02:48時点の検証結果
-<img width="678" alt="スクリーンショット 2021-01-14 13 13 29" src="https://user-images.githubusercontent.com/15845907/104544102-55be7780-566a-11eb-84ea-c0a5e93f9c6b.png">
-<img width="678" alt="スクリーンショット 2021-01-14 13 13 29" src="https://user-images.githubusercontent.com/15845907/104544102-55be7780-566a-11eb-84ea-c0a5e93f9c6b.png">
+以下、画像は上がトップページで下が個別ページ
 
-ついに拒否されてしまった。<BR />
-これでは計測ができない。
+## まずはまっさらな状態
+<img width="696" alt="スクリーンショット 2021-01-16 15 54 35" src="https://user-images.githubusercontent.com/15845907/104800338-7a098800-5813-11eb-92bc-a6ec76499a08.png">
+<img width="698" alt="スクリーンショット 2021-01-16 15 55 51" src="https://user-images.githubusercontent.com/15845907/104800372-7c6be200-5813-11eb-9179-80bdf0ad524e.png">
 
-## デフォルトフォントを表示させるようにして再挑戦
-https://github.com/shimajima-eiji/Hosting/commit/63889f226b70fa034fabe9d9fe5cac2bdd934c08 で読み込めたら処理させるようにする
+- [トップ](https://60028cc573551b000706c512--speedtest-netlify.netlify.app)
+- [個別](https://60028cc573551b000706c512--speedtest-netlify.netlify.app/milkdb)
+モバイル部門ではじめて100点を取った記念。<BR>
+インデックスでmicroCMSの画像を取るのをやめた場合と、個別ページで画像を取っていたページの比較がしたかったから、**単純にmicroCMSから画像をもらってくる事は危険**だということが分かる。
 
-[検証サイト](https://5fffccafe47d7f00073f4748--speedtest-netlify.netlify.app)
+## ウェブフォントを読ませようとした
+<img width="700" alt="スクリーンショット 2021-01-16 16 05 23" src="https://user-images.githubusercontent.com/15845907/104804259-affb3c00-5814-11eb-9c05-f33b6cf7fc68.png">
 
-実機で確認してみたが、期待した動作をしている。<BR />
-とりあえず読ませられるけど端末の処理速度の問題だろうか、モバイルとPCのスコアの違いを体感で理解する事ができた。
-
-<img width="723" alt="スクリーンショット 2021-01-14 13 49 46" src="https://user-images.githubusercontent.com/15845907/104546386-67564e00-566f-11eb-81a3-d79a48f9db4b.png">
-<img width="730" alt="スクリーンショット 2021-01-14 13 49 54" src="https://user-images.githubusercontent.com/15845907/104546390-69b8a800-566f-11eb-876f-638d35543d94.png">
-
-モバイル画面で適切なフォントになっていない気がするが、これはなんでだろう？<BR />
-やはりCDNを使う方法を検討したほうが良さそうだ。
-
-[前回：重い原因はフォントの**読み込み**が原因だと分かる。](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-font-speedtest/README.md)<BR />
-[次回：Webフォントでも爆速で読み込ませたい](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-webfont-speedtest/README.md)
+計測不可。<BR />
+この後適用箇所を制限したりライフサイクルを変えたり代替フォントを指定するなどで対応したが、全体的にフォントを変更したい場合は使えないので、そもそも導入を見送る方が良さそうだ。
+  
+ただし、通常利用には全く問題はないので、計測したい時だけ開発環境でフォントを外すといった対応をするのが良さそうだ。
