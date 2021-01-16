@@ -1,3 +1,4 @@
+// dotenv: https://qiita.com/xrxoxcxox/items/4e337b96fc9017b3771c
 require( "dotenv" ).config()
 
 module.exports = {
@@ -105,6 +106,31 @@ module.exports = {
         start_url: "/",
         display: `standalone`,
         icon: `src/images/favicon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`, // https://webcraftlog.net/best-gatsbyjs-plugins/
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
+        minimum: 0.08,
+        easing: 'linear',
+        positionUsing: '',
+        speed: 200,
+        trickle: true,
+        trickleSpeed: 200,
+        barSelector: '[role="bar"]',
+        spinnerSelector: '[role="spinner"]',
+        parent: 'body',
+        template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-adsense`,  // https://takumon.com/2018/10/07/
+      options: {
+        publisherId: process.env.GATSBY_ADSENSE, // dotenv
       },
     },
   ],
