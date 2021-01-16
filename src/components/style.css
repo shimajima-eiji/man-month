@@ -3,11 +3,13 @@
 @font-face {
   font-family: "Komorebi";
   src: url("../fonts/komorebi-gothic.woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "corp";
   src: url("../fonts/corp_min.woff2");
+  font-display: swap;
 }
 
 /*

@@ -16,12 +16,10 @@ const Style_normal_text = css`
   text-align: justify;
 
   p {
-    font-family: 'Komorebi', serif;
-    font-display: swap;
+    font-family: 'Komorebi';
   }
   h1, h2, h3, h4, h5 {
-    font-family: "corp", serif;
-    font-display: swap;
+    font-family: "corp";
   }
 `
 
@@ -58,8 +56,7 @@ const Style_container = css`
 `
 
 const Style_contents_head = css`
-  font-family: "corp", serif;
-  font-display: swap;
+  font-family: "corp";
 `
 
 const Style_tags = css`
