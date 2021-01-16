@@ -1,6 +1,5 @@
 # スピードテスト
 - [いつもの](https://developers.google.com/speed/pagespeed/insights/?hl=ja)
-- [検証サイト](https://6001df2814eaf35b9cab82af--speedtest-netlify.netlify.app)
 
 以下、画像は上がトップページで下が個別ページ
 
