@@ -1,5 +1,6 @@
 import React from "react"
 import urlJoin from "url-join"  // need: url-join
+import { StaticImage } from "gatsby-plugin-image"  // FYI: https://ebisu.com/note/new-gatsby-image/
 
 // FYI: https://webcraftlog.net/best-gatsbyjs-plugins/
 import Layout from "@components/layout"
@@ -27,9 +28,8 @@ const Style_container = css`
   }
 
   img {
-    width: 100%;
-    max-width: 480px;
-    max-height: 480px;
+    max-width: 100%;
+    max-height: 360px;
   }
 
   h1, h2, h3 {
@@ -65,12 +65,15 @@ export default ( { pageContext } ) =>
   const body = childConvertHtml.convertedHtml
   const sns_title = title + " #" + pageContext.site.title
   const url = urlJoin( pageContext.site.url, mainId )
+  const image = door ? door.url : pageContext.site.image
+  const noImage = "../images/icon.webp"
+
   return (
     <Layout>
       <SEO title={ title }
         description={ description }
         url={ mainId }
-        image={ door.url }
+        image={ image }
       />
       <div css={ Style_container }>
         <article>
@@ -80,11 +83,15 @@ export default ( { pageContext } ) =>
             title={ sns_title }
             url={ url }
           />
-          { console.log( door.url ) }
-          <img
-            src={ door.url }
-            alt="のむらや"
-          />
+          { ( door )
+            ? <img src={ door.url } alt={ title } />
+            : <StaticImage
+              src={ noImage }
+              layout="fluid"
+              style={ { width: "360px", height: "360px" } }
+              alt={ title }
+            />
+          }
           <section css={ Style_normal_text } dangerouslySetInnerHTML={ { __html: body } } />
           < Share
             title={ sns_title }
@@ -93,9 +100,9 @@ export default ( { pageContext } ) =>
           />
           {/* ここで生成するclassは@components/style.cssで適用する */ }
           <nav css={ Style_tags } dangerouslySetInnerHTML={ {
-            __html: ( tags.length === 1 && tags[ 0 ] === "（未選択）" )
-              ? ``
-              : `<h1>関連キーワード・ハッシュタグ</h1><ul>` + tags.map( tag => <li>${ tag }</li> ) + `</ul>`
+            __html: ( tags && tags[ 0 ] !== "（未選択）" )
+              ? `<h1>関連キーワード・ハッシュタグ</h1><ul>` + tags.map( tag => `<li>${tag}</li>` ) + `</ul>`
+              : null
           } }
           />
         </article>

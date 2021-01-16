@@ -125,6 +125,7 @@ function sumarrize ( html )
 
 export default ( { data } ) =>
 {
+  const noImage = "../images/icon.webp"
   return (
     <Layout>
       <SEO title="記事一覧" />
@@ -138,10 +139,18 @@ export default ( { data } ) =>
                 <div css={ Style_contents }>
                   <div css={ [ Style_detail, Style_normal_text ] }>
                     <Link to={ node.mainId }><h1>{ node.title }　<span>{ node.updatedAt }</span></h1></Link>
-                    <p>{ node.description !== "0" ? node.description : sumarrize( node.body ).slice( 0, 100 ) + '......' } </p>
+                    <p>{ node.description || sumarrize( node.body ).slice( 0, 100 ) + '......' } </p>
                   </div>
                   <Link to={ node.mainId }><div>
-                    <img src={ node.door.url } alt={ node.title } />
+                    { ( node.door )
+                      ? <img src={ node.door.url } alt={ node.title } />
+                      : <StaticImage
+                        src={ noImage }
+                        layout="fluid"
+                        style={ { width: "200px", height: "200px" } }
+                        alt={ node.title }
+                      />
+                    }
                   </div></Link>
                 </div>
                 <div css={ Style_link }><Link to={ node.mainId }>続きを読む　<span>({ node.body.length }文字</span>)</Link></div>
@@ -154,7 +163,7 @@ export default ( { data } ) =>
           <div css={ Style_layout_block }>
             <div>
               <StaticImage
-                src="../images/author.png"
+                src="../images/author.webp"
                 layout="fluid"
                 style={ { width: "128px", height: "128px" } }
                 alt="のむらや"

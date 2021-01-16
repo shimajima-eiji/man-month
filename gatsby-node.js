@@ -54,18 +54,18 @@ exports.createPages = async ( { graphql, actions } ) =>
   pages.forEach( ( post, index ) =>
   {
     // 降順で取っているので勘違いに注意
-    const prev = ( post.prev != "0" )
+    const prev = ( post.prev )
       ? pages.filter( page => page.mainId == post.prev )[ 0 ]  // 決め打ち
       : ( index === pages.length - 1 )  // 最後のページなら次は最初のリンク
         ? pages[ 0 ]
         : pages[ index + 1 ]
-    const next = ( post.next != "0" )
+    const next = ( post.next )
       ? pages.filter( page => page.mainId == post.next )[ 0 ]
       : ( index === 0 )
         ? pages[ pages.length - 1 ]
         : pages[ index - 1 ]
 
-    if ( post.description !== "0" ) post.description = sumarrize( post.childConvertHtml.convertedHtml )
+    if ( !post.description ) post.description = sumarrize( post.childConvertHtml.convertedHtml )
     createPage( {
       path: post.mainId,
       component: path.resolve( 'src/templates/blog-post.js' ),
