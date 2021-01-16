@@ -16,12 +16,12 @@ const Style_normal_text = css`
   text-align: justify;
 
   p {
-    font-family: 'Komorebi';
-    font-display: fallback;
+    font-family: 'Komorebi', serif;
+    font-display: swap;
   }
   h1, h2, h3, h4, h5 {
-    font-family: "corp";
-    font-display: fallback;
+    font-family: "corp", serif;
+    font-display: swap;
   }
 `
 
@@ -58,8 +58,8 @@ const Style_container = css`
 `
 
 const Style_contents_head = css`
-  font-family: "corp";
-  font-display: fallback;
+  font-family: "corp", serif;
+  font-display: swap;
 `
 
 const Style_tags = css`
