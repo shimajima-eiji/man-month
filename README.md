@@ -3,22 +3,22 @@
 
 以下、画像は上がトップページで下が個別ページ
 
-## まずはまっさらな状態
-<img width="696" alt="スクリーンショット 2021-01-16 15 54 35" src="https://user-images.githubusercontent.com/15845907/104800338-7a098800-5813-11eb-92bc-a6ec76499a08.png">
-<img width="698" alt="スクリーンショット 2021-01-16 15 55 51" src="https://user-images.githubusercontent.com/15845907/104800372-7c6be200-5813-11eb-9179-80bdf0ad524e.png">
+## Adsenseが入っていない場合
+<img width="411" alt="スクリーンショット 2021-01-16 21 05 20" src="https://user-images.githubusercontent.com/15845907/104811418-af779b00-583e-11eb-8508-d17402b85985.png">
+<img width="413" alt="スクリーンショット 2021-01-16 21 05 32" src="https://user-images.githubusercontent.com/15845907/104811426-b1d9f500-583e-11eb-8372-f623242425ac.png">
 
-- [トップ](https://60028cc573551b000706c512--speedtest-netlify.netlify.app)
-- [個別](https://60028cc573551b000706c512--speedtest-netlify.netlify.app/milkdb)
-モバイル部門ではじめて100点を取った記念。<BR />　
-インデックスでmicroCMSの画像を取るのをやめた場合と、個別ページで画像を取っていたページの比較がしたかったから、**単純にmicroCMSから画像をもらってくる事は危険**だということが分かる。<BR />
-直近では問題なさそうだが、トップページのスコアが目減りしていくのでページネーションなど対策は必要。
+- [トップページ](https://6002a08f1338ad0007259307--speedtest-netlify.netlify.app)
+- [個別ページ](https://6002a08f1338ad0007259307--speedtest-netlify.netlify.app/milkdb)
 
-## ウェブフォントを読ませようとした
-<img width="699" alt="スクリーンショット 2021-01-16 17 07 23" src="https://user-images.githubusercontent.com/15845907/104806781-6c590000-581d-11eb-9274-a32119a04f3f.png">
-<img width="703" alt="スクリーンショット 2021-01-16 17 08 05" src="https://user-images.githubusercontent.com/15845907/104806783-6ebb5a00-581d-11eb-94ab-b87a8a49dbca.png">
+## Adsenseを入れた場合
+<img width="660" alt="スクリーンショット 2021-01-16 21 31 17" src="https://user-images.githubusercontent.com/15845907/104811952-4eea5d00-5842-11eb-9a7c-583bdf84c1fd.png">
+<img width="658" alt="スクリーンショット 2021-01-16 21 31 26" src="https://user-images.githubusercontent.com/15845907/104811955-514cb700-5842-11eb-9292-7ba1d274d783.png">
 
-- [トップ](https://6002997593df3600079f95be--speedtest-netlify.netlify.app)
-- [個別](https://6002997593df3600079f95be--speedtest-netlify.netlify.app/milkdb)
+- [トップページ](https://6002db9fde4a920007db23bf--speedtest-netlify.netlify.app)
+- [個別ページ](https://6002db9fde4a920007db23bf--speedtest-netlify.netlify.app/milkdb)
 
-フォントをどれだけ適用するかによる。単純に描画の問題っぽい。<BR />
-Gatsbyの公式で対応してくれるものじゃないと悲しい結果になったから、最適化してくれるプラグインの存在はありがたい。
+アクセスしてもらうしかないが、体感で違いがあるだろうか？<BR />
+どちらも「ちょっと読み込みが遅いな？」ぐらいしか感じていない。
+
+- [戻る](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-ver2-speedtest/README.md)
+- [終わる前に](https://nomuraya-diary.netlify.app/complate_v1)
