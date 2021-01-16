@@ -78,7 +78,7 @@ const Style_detail = css`
   }
 
   h1 a{
-    /* font-family: "corp"; */
+    font-family: "corp";
     font-display: swap;
   }
 `
@@ -115,7 +115,7 @@ const Style_layout_block = css`
 
   text-align: justify;
   span {
-    /* font-family: "corp"; */
+    font-family: "corp";
     font-display: swap;
   }
 `
