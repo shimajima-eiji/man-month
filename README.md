@@ -22,3 +22,6 @@
 
 フォントをどれだけ適用するかによる。単純に描画の問題っぽい。<BR />
 Gatsbyの公式で対応してくれるものじゃないと悲しい結果になったから、最適化してくれるプラグインの存在はありがたい。
+
+- [前へ：フォントの対応を考える](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-webfont-speedtest/README.md)
+- [次へ：最後に残った重そうなプラグインを入れていく](https://github.com/shimajima-eiji/Hosting/blob/netlify-gatsby-plugin-speedtest/README.md)
