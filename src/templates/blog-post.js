@@ -17,11 +17,11 @@ const Style_normal_text = css`
 
   p {
     font-family: 'Komorebi';
-    font-display: swap;
+    font-display: fallback;
   }
   h1, h2, h3, h4, h5 {
     font-family: "corp";
-    font-display: swap;
+    font-display: fallback;
   }
 `
 
@@ -59,7 +59,7 @@ const Style_container = css`
 
 const Style_contents_head = css`
   font-family: "corp";
-  font-display: swap;
+  font-display: fallback;
 `
 
 const Style_tags = css`
