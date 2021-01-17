@@ -128,12 +128,12 @@ module.exports = {
         template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
       },
     },
-    {
-      resolve: `gatsby-plugin-google-adsense`,  // FYI: https://takumon.com/2018/10/07/
-      options: {
-        publisherId: process.env.GATSBY_ADSENSE, // dotenv
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-adsense`,  // FYI: https://takumon.com/2018/10/07/
+    //   options: {
+    //     publisherId: process.env.GATSBY_ADSENSE, // dotenv
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-netlify`,  // FYI: https://blog.ojisan.io/gatsby-meet-netlify
       options: {
