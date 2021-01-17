@@ -2,4 +2,5 @@
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
 [build]
+  publish = "public"
   command = "gatsby build"

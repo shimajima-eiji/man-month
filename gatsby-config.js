@@ -2,6 +2,7 @@
 require( "dotenv" ).config()
 
 module.exports = {
+  pathPrefix: "/microcms-gatsby",  // FYI: https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/
   siteMetadata: {
     title: `インターネット老人おぢさん`,
     description: `元CEO現役フリーランスエンジニア兼講師兼Youtuber「のむらやごろう」です。プログラミングの楽しさと副業・転職の話をスクール、スカウト、採用の3つの目線で解説します。STEM教育（水耕栽培など家庭農業IoT）とイクメン活動に奔走中`,
@@ -109,7 +110,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-nprogress`, // https://webcraftlog.net/best-gatsbyjs-plugins/
+      resolve: `gatsby-plugin-nprogress`, // FYI: https://webcraftlog.net/best-gatsbyjs-plugins/
       options: {
         // Setting a color is optional.
         color: `tomato`,
@@ -128,9 +129,20 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-adsense`,  // https://takumon.com/2018/10/07/
+      resolve: `gatsby-plugin-google-adsense`,  // FYI: https://takumon.com/2018/10/07/
       options: {
         publisherId: process.env.GATSBY_ADSENSE, // dotenv
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify`,  // FYI: https://blog.ojisan.io/gatsby-meet-netlify
+      options: {
+        headers: {
+          "/*.html": [ "Cache-Control: public, max-age=0, must-revalidate" ],
+          "/sw.js": [ "Cache-Control: no-cache" ],
+          "/**/*.js": [ "Cache-Control: public, max-age=31536000, immutable" ],
+          "/**/*.css": [ "Cache-Control: public, max-age=31536000, immutable" ],
+        },
       },
     },
   ],
