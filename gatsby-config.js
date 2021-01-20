@@ -129,6 +129,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-adsense`,  // FYI: https://www.gatsbyjs.com/plugins/gatsby-plugin-google-adsense/
+      options: {
+        publisherId: process.env.GATSBY_ADSENSE, // dotenv/ ca-pub-XXXXXXXXXXXXXXXX
+      },
+    },
+    {
       resolve: `gatsby-plugin-netlify`,  // FYI: https://blog.ojisan.io/gatsby-meet-netlify
       options: {
         headers: {

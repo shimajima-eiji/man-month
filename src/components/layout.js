@@ -23,7 +23,6 @@ const Layout = ( { children } ) =>
   return (
     <>
       <Header siteTitle={ data.site.siteMetadata?.title || `Title` } />
-      <script data-ad-client={ process.env.GATSBY_ADSENSE } async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <div
         style={ {
           margin: `0 auto`,
