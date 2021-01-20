@@ -9,6 +9,7 @@ const Header = ( { siteTitle } ) => (
       marginBottom: `1.45rem`,
     } }
   >
+    <script data-ad-client={ process.env.GATSBY_ADSENSE } async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <div
       style={ {
         margin: `0 auto`,
