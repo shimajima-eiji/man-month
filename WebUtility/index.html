@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>書籍一覧</title>
+    </head>
+    <body>
+        <form name="MyInput">
+            <table ID=Input>
+                <tr>
+                    <th> 入力</th>
+                    <td><input type="text" name="clickMoji"></td>
+                </tr>
+            </table>
+        </form>
+        <div id="Softkey">
+            <table>
+                <tr ID="SoftkeyErs">
+                    <th colspan="5"><a href="#" onClick="SoftClear()">入力行消去</a></th>
+                    <th colspan="5"><a href="#" onClick="SoftErase()">１文字消去</a></th>
+                    <!-- ここに足す -->
+                </tr>
+            </table>
+        </div>
+        <script src="keyboard.js"></script>
+        <script>
+            SoftKeyboard();
+        </script>
+    </body>
+</html>
