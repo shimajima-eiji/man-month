@@ -1,0 +1,65 @@
+<style>
+    #monitor {
+        display: flex;
+    }
+
+</style>
+<p>クッキー：<span id="view">0</span></p>
+<div id="monitor">
+    <div>
+        <img alt="クッキー画像" src="cookie.png" onclick='action.cookie("user")' />
+    </div>
+    <aside>
+        <button onclick="action.granma()">グランマ</button>
+    </aside>
+</div>
+
+<!-- <script src="cookie.js"></script> -->
+<script>
+    // システム定数
+    const cookie_update = () =>
+    {
+        cookie_view.textContent = game_object.cookie.count;
+        localStorage.setItem( "cookies", game_object.cookie.count );
+    }
+
+    // ゲーム情報
+    const game_object = {
+        cookie: {
+            count: 0,
+        },
+        user: {
+            click: 1,
+        },
+        granma: {
+            count: 0,
+            click: 1,
+            buy_cookie: 100,
+            interval: 100,
+        }
+
+    }
+
+    // 画面側情報
+    const cookie_view = document.getElementById( "view" );
+
+    // 画面側操作
+    const action = {
+        cookie: ( target ) =>
+        {
+            game_object.cookie.count += game_object[ target ].click;
+            cookie_update();
+        },
+        granma: () =>
+        {
+            game_object.granma.count++;
+            setInterval( action.cookie( "granma" ), game_object.granma.interval );
+        }
+    };
+
+    // 初期化
+    let default_cookies = parseInt( localStorage.getItem( "cookies" ) );
+    if ( !isNaN( default_cookies ) ) game_object.cookie.count = default_cookies;
+    cookie_view.textContent = game_object.cookie.count;
+
+</script>
