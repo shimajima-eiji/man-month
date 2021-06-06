@@ -3,63 +3,151 @@
         display: flex;
     }
 
+    .initialize {
+        width: 100%;
+    }
+
 </style>
 <p>クッキー：<span id="view">0</span></p>
+<p><span id="message"></span></p>
 <div id="monitor">
     <div>
         <img alt="クッキー画像" src="cookie.png" onclick='action.cookie("user")' />
     </div>
     <aside>
         <button onclick="action.granma()">グランマ</button>
+        <!-- パワーアップやスピードアップは未実装 -->
+        <button onclick="action.granma_clickup()">グランマ強化</button>
+        <button onclick="action.granma_speedup()">グランマスピードアップ</button>
     </aside>
 </div>
+<button class="initialize" onclick="action.initialize()">初期化</button>
 
 <!-- <script src="cookie.js"></script> -->
 <script>
     // システム定数
+
+    /**
+     * クッキーを焼いたら画面とキャッシュに保存
+     */
     const cookie_update = () =>
     {
         cookie_view.textContent = game_object.cookie.count;
-        localStorage.setItem( "cookies", game_object.cookie.count );
+        localStorage.setItem( caches.cookies, game_object.cookie.count );
     }
 
     // ゲーム情報
-    const game_object = {
+    // 初期化するための情報
+    const initialize = {
         cookie: {
-            count: 0,
+            count: 0,  // 画面に表示するクッキー。ここを更新する場合はcookie_update()を使う
         },
         user: {
-            click: 1,
+            click: 1,  // プレイヤーが頑張ってクッキーを押した時のクッキーを焼ける数
         },
         granma: {
-            count: 0,
-            click: 1,
-            buy_cookie: 100,
-            interval: 100,
+            count: 0,         // 雇ったグランマの数。キャッシュにも保存
+            click: 1,         // グランマが１回に焼けるクッキー数
+            buy_cookie: 100,  // グランマを雇うためのクッキー数
+            interval: 1000,   // グランマが一回クッキーを焼く為に必要なミリ秒
         }
+    }
 
+    // ゲーム内で変更するのはこっち
+    let game_object = initialize;
+
+    // ゲームの保存にクッキー（ブラウザのキャッシュ）を使う。
+    const caches = {
+        cookies: "cookies",
+        granma: "granma_count",
+        granma_power: "granma_power",  // 未実装
+        granma_speed: "granma_speed",  // 未実装
     }
 
     // 画面側情報
     const cookie_view = document.getElementById( "view" );
+    const message = document.getElementById( "message" );
+    // ボタンの情報を保持する必要がない設計にしているので、出力に必要なら書き足すぐらいでOK
+
+    const message_display = ( mes = "" ) =>
+    {
+        message.textContent = mes;
+        // メッセージ削除時はここで止めないと無限ループになる
+        if ( mes == "" ) return;
+
+        // 3秒後にメッセージを削除
+        setTimeout( () => message_display(), 3000 );
+    }
 
     // 画面側操作
     const action = {
+
+        // クッキーをクリックした場合
         cookie: ( target ) =>
         {
+            // TODO: グランマやその他アポカリプスなヤツらを育てるとゴミになりかねないので、何かアルゴリズムを考えるべき
             game_object.cookie.count += game_object[ target ].click;
             cookie_update();
         },
-        granma: () =>
+
+        // グランマボタンをクリックした場合
+        // 画面を開き直した時にも呼びたいので、initialize_flag引数を追加
+        granma: ( initialize_flag = false ) =>
         {
+            // 初期化時はクッキーを消費しない && グランマを雇うためのクッキーがなければ何もしない
+            if ( !initialize_flag && game_object.cookie.count < game_object.granma.buy_cookie )
+            {
+                message_display( "クッキーが足りません" );
+                return;
+            }
+            // 初期化時はクッキーを減らさずグランマを雇う
+            // キャッシュにいるグランマが既存クッキーを持っていく、というおかしな処理をさせない
+            if ( !initialize_flag )
+                game_object.cookie.count = parseInt( game_object.cookie.count - game_object.granma.buy_cookie );
+
+            // グランマの数をキャッシュに呼ぶ
             game_object.granma.count++;
-            setInterval( action.cookie( "granma" ), game_object.granma.interval );
-        }
+            localStorage.setItem( caches.granma, game_object.granma.count );
+
+            // 小数点を消すためにparseInt
+            game_object.granma.buy_cookie = parseInt( game_object.granma.buy_cookie * 1.2 );
+            setInterval( () => action.cookie( "granma" ), game_object.granma.interval );
+            cookie_update();
+        },
+
+        granma_clickup: ( initialize_flag ) => null,  // TODO: 実装
+        granma_speedup: ( initialize_flag ) => null,  // TODO: 実装。既存のsetIntervalを書き換える必要があるので結構大変。ユーザーが画面を更新する分には大丈夫
+
+        // 最初からやり直す
+        initialize: () =>
+        {
+            game_object = initialize;
+            localStorage.setItem( caches.cookies, 0 );
+            localStorage.setItem( caches.granma, 0 );
+            // localStorage.setItem( caches.granma_clickup, 0 );
+            // localStorage.setItem( caches.granma_speedup, 0 );
+            location.reload();
+        },
     };
 
     // 初期化
-    let default_cookies = parseInt( localStorage.getItem( "cookies" ) );
+    let default_cookies = parseInt( localStorage.getItem( caches.cookies ) );
+    // 引き続きプレイした場合は、クッキー数を反映させる
     if ( !isNaN( default_cookies ) ) game_object.cookie.count = default_cookies;
     cookie_view.textContent = game_object.cookie.count;
 
+    let default_granmas = localStorage.getItem( caches.granma );
+    // 引き続きプレイした場合は、グランマ数やグランマパワーを反映させる
+    if ( !isNaN( default_granmas ) )
+    {
+        for ( i = 1; i <= default_granmas; i++ )
+        {
+            action.granma( true );
+            action.granma_clickup( true );
+            action.granma_speedup( true );
+        }
+    }
+
+    console.log( game_object.granma.buy_cookie );
+    console.log( game_object.granma.count );
 </script>
